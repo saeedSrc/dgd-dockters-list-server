@@ -16,9 +16,10 @@ class CreateInsuranceCompaniesTable extends Migration
         Schema::create('insurance_companies', function (Blueprint $table) {
             $table->id();
             $table->enum('type', ['supplementary', 'normal']);
-            $table->unsignedBigInteger('insurance_companies_centers');
+
             $table->string('name');
             $table->timestamps();
+
         });
     }
 

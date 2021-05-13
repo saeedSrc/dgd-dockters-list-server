@@ -15,11 +15,11 @@ class CreateInsuranceCompaniesCentersTable extends Migration
     {
         Schema::create('insurance_companies_centers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('insurance_company');
-            $table->unsignedBigInteger('center');
+            $table->unsignedBigInteger('insurance_company_id');
+            $table->unsignedBigInteger('center_id');
 
-            $table->foreign('insurance_company')->references('id')->on('insurance_companies')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('center')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('insurance_company_id')->references('id')->on('insurance_companies')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('center_id')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

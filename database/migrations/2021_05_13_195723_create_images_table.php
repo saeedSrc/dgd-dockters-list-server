@@ -15,11 +15,12 @@ class CreateImagesTable extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('center');
+            $table->unsignedBigInteger('center_id');
+//            $table->unsignedBigInteger('doctor');
             $table->string('path');
             $table->timestamps();
 
-            $table->foreign('center')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('center_id')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
 //            $table->foreign('doctor')->references('id')->on('doctors')->onUpdate('cascade')->onDelete('cascade');
         });
     }
