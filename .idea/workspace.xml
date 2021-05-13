@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ae52048-762a-43c4-8bc7-8b5f712d2224" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-    </list>
+    <list default="true" id="1ae52048-762a-43c4-8bc7-8b5f712d2224" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,18 +47,58 @@
       <file leaf-file-name="2021_05_13_182123_create_centers_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_182123_create_centers_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+            <state relative-caret-position="153">
+              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2021_05_13_194356_create_hours_of_works_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2021_05_13_195723_create_images_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_195723_create_images_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2021_05_13_201349_create_insurance_companies_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_201349_create_insurance_companies_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2021_05_13_202824_create_insurance_companies_centers_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_202824_create_insurance_companies_centers_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="21" column="66" lean-forward="false" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2021_05_13_191153_create_center_types_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_191153_create_center_types_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2021_05_13_194356_create_hours_of_works_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_194356_create_hours_of_works_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+            <state relative-caret-position="415">
+              <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -92,8 +129,11 @@
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_185915_create_city_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_185903_create_province_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_192041_create_countries_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2021_05_13_182123_create_centers_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_194356_create_hours_of_works_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_13_182123_create_centers_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_13_195723_create_images_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_13_201349_create_insurance_companies_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_13_202824_create_insurance_companies_centers_table.php" />
       </list>
     </option>
   </component>
@@ -275,12 +315,6 @@
               <item name="dgd-dockters-list-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="dgd-dockters-list-server" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="factories" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dgd-dockters-list-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dgd-dockters-list-server" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -319,12 +353,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620923065382</updated>
-      <workItem from="1620923066799" duration="10860000" />
+      <workItem from="1620923066799" duration="13621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10860000" />
+    <option name="totallyTimeSpent" value="13621000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1053" extended-state="6" />
@@ -434,14 +468,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_191153_create_center_types_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_192041_create_countries_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -458,18 +484,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_182123_create_centers_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_194356_create_hours_of_works_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+        <state relative-caret-position="415">
+          <caret line="36" column="35" lean-forward="false" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_194356_create_hours_of_works_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_191153_create_center_types_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="33" column="36" lean-forward="false" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+        <state relative-caret-position="234">
+          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_182123_create_centers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_195723_create_images_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="49" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_201349_create_insurance_companies_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_202824_create_insurance_companies_centers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="66" lean-forward="false" selection-start-line="21" selection-start-column="66" selection-end-line="21" selection-end-column="66" />
           <folding />
         </state>
       </provider>
