@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ae52048-762a-43c4-8bc7-8b5f712d2224" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_13_195723_create_images_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_05_13_195723_create_images_table.php" />
-    </list>
+    <list default="true" id="1ae52048-762a-43c4-8bc7-8b5f712d2224" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +24,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2021_05_13_205045_create_phones_table.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2021_05_13_205045_create_phones_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_205045_create_phones_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+            <state relative-caret-position="324">
+              <caret line="20" column="116" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="20" selection-end-column="116" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2021_05_13_205750_create_special_doctors_table.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_205750_create_special_doctors_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="20" column="116" lean-forward="false" selection-start-line="20" selection-start-column="116" selection-end-line="20" selection-end-column="116" />
               <folding />
             </state>
           </provider>
@@ -84,6 +92,7 @@
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_195723_create_images_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_204527_create_addresses_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_205045_create_phones_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_13_205750_create_special_doctors_table.php" />
       </list>
     </option>
   </component>
@@ -303,12 +312,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620923065382</updated>
-      <workItem from="1620923066799" duration="14804000" />
+      <workItem from="1620923066799" duration="15273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14804000" />
+    <option name="totallyTimeSpent" value="15273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1053" extended-state="6" />
@@ -508,8 +517,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_205045_create_phones_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        <state relative-caret-position="324">
+          <caret line="20" column="116" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="20" selection-end-column="116" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_205750_create_special_doctors_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="116" lean-forward="false" selection-start-line="20" selection-start-column="116" selection-end-line="20" selection-end-column="116" />
           <folding />
         </state>
       </provider>
