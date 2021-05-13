@@ -20,7 +20,7 @@ class CreateImagesTable extends Migration
             $table->timestamps();
 
             $table->foreign('center')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('doctor')->references('id')->on('doctors')->onUpdate('cascade')->onDelete('cascade');
+//            $table->foreign('doctor')->references('id')->on('doctors')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
