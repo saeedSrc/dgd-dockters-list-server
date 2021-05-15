@@ -13,7 +13,7 @@ class UpdateProvinceTableAddForeignkeys extends Migration
      */
     public function up()
     {
-        Schema::table('province', function (Blueprint $table) {
+        Schema::table('provinces', function (Blueprint $table) {
             $table->foreign('country')->references('id')->on('countries')->onUpdate('cascade')->onDelete('cascade');;
         });
     }
@@ -25,8 +25,8 @@ class UpdateProvinceTableAddForeignkeys extends Migration
      */
     public function down()
     {
-        Schema::table('province', function (Blueprint $table) {
-            //
+        Schema::table('provinces', function (Blueprint $table) {
+            $table->foreign('country')->references('id')->on('countries')->onUpdate('cascade')->onDelete('cascade');;
         });
     }
 }

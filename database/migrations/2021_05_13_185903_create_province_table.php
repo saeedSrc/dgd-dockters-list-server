@@ -13,11 +13,13 @@ class CreateProvinceTable extends Migration
      */
     public function up()
     {
-        Schema::create('province', function (Blueprint $table) {
+        Schema::create('provinces', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('country');
             $table->string('name');
             $table->string('name_en');
+            $table->decimal('latitude');
+            $table->decimal('longitude');
 
         });
     }

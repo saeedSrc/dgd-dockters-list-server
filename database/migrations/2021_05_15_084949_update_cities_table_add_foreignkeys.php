@@ -14,7 +14,7 @@ class UpdateCitiesTableAddForeignkeys extends Migration
     public function up()
     {
         Schema::table('cities', function (Blueprint $table) {
-            $table->foreign('province')->references('id')->on('province')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('province')->references('id')->on('provinces')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

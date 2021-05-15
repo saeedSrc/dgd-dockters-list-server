@@ -17,7 +17,7 @@ class CreateCityTable extends Migration
             $table->id();
             $table->unsignedBigInteger('province');
             $table->string('name');
-            $table->string('name_en');
+            $table->string('name_en')->default(null);
             $table->decimal('latitude');
             $table->decimal('longitude');
 
