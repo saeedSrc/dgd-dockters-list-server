@@ -14,7 +14,7 @@ class CenterTypeController extends Controller
      */
     public function index()
     {
-        //
+        return CenterType::all();
     }
 
     /**
@@ -74,7 +74,12 @@ class CenterTypeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+     $ct = CenterType::findOrFail($id);
+        $ct->name = $request->name;
+        $ct->name_en = $request->name_en;
+        if ($ct->save()) {
+            return $ct;
+        }
     }
 
     /**
@@ -85,6 +90,9 @@ class CenterTypeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ct = CenterType::findOrFail($id);
+        if ($ct->delete()) {
+            return $ct;
+        }
     }
 }

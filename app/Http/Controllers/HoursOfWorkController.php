@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\HoursOfWork;
 use Illuminate\Http\Request;
 
-class HouseOfworkController extends Controller
+class HoursOfWorkController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class HouseOfworkController extends Controller
      */
     public function index()
     {
-        //
+       return HoursOfWork::all();
     }
 
     /**
@@ -102,7 +102,42 @@ class HouseOfworkController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $HOW = HoursOfWork::findOrFail($id);
+        if ($request->saturday_start)
+            $HOW->saturday_start = $request->saturday_start;
+        if ($request->sunday_start)
+            $HOW->sunday_start = $request->sunday_start;
+        if ($request->monday_start)
+            $HOW->monday_start = $request->monday_start;
+        if ($request->thursday_start)
+            $HOW->thursday_start = $request->thursday_start;
+        if ($request->wednesday_start)
+            $HOW->wednesday_start = $request->wednesday_start;
+        if ($request->tuesday_start)
+            $HOW->tuesday_start = $request->tuesday_start;
+        if ($request->friday_start)
+            $HOW->friday_start = $request->friday_start;
+
+        if ($request->saturday_end)
+            $HOW->saturday_end = $request->saturday_end;
+        if ($request->sunday_end)
+            $HOW->sunday_end = $request->sunday_end;
+        if ($request->monday_end)
+            $HOW->monday_end = $request->monday_end;
+        if ($request->thursday_end)
+            $HOW->thursday_end = $request->thursday_end;
+        if ($request->wednesday_end)
+            $HOW->wednesday_end = $request->wednesday_end;
+        if ($request->tuesday_end)
+            $HOW->tuesday_end = $request->tuesday_end;
+        if ($request->friday_end)
+            $HOW->friday_end = $request->friday_end;
+
+        if ($HOW->save()) {
+            return $HOW;
+        }
+
     }
 
     /**
@@ -113,6 +148,9 @@ class HouseOfworkController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $HOW = HoursOfWork::findOrFail($id);
+        if ($HOW->delete()) {
+            return $HOW;
+        }
     }
 }

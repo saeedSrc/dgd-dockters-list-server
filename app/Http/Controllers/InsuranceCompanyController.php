@@ -14,7 +14,7 @@ class InsuranceCompanyController extends Controller
      */
     public function index()
     {
-        //
+       return InsuranceCompany::all();
     }
 
     /**
@@ -35,7 +35,12 @@ class InsuranceCompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ic = new InsuranceCompany();
+        $ic->name = $request->name;
+//        $ic->name_en = $request->name_en;
+        $ic->type = $request->type;
+        if ($ic->save())
+            return $ic;
     }
 
     /**
@@ -67,9 +72,14 @@ class InsuranceCompanyController extends Controller
      * @param  \App\Models\InsuranceCompany  $insuranceCompany
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, InsuranceCompany $insuranceCompany)
+    public function update(Request $request, $id)
     {
-        //
+        $ic = InsuranceCompany::findOrFail($id);
+        $ic->name = $request->name;
+//        $ic->name_en = $request->name_en;
+        $ic->type = $request->type;
+        if ($ic->save())
+            return $ic;
     }
 
     /**
@@ -78,8 +88,11 @@ class InsuranceCompanyController extends Controller
      * @param  \App\Models\InsuranceCompany  $insuranceCompany
      * @return \Illuminate\Http\Response
      */
-    public function destroy(InsuranceCompany $insuranceCompany)
+    public function destroy($id)
     {
-        //
+        $ic = InsuranceCompany::findOrFail($id);
+        if ($ic->delete()) {
+            return $ic;
+        }
     }
 }

@@ -14,7 +14,7 @@ class SpecialTestController extends Controller
      */
     public function index()
     {
-        //
+       return SpecialTest::all();
     }
 
     /**
@@ -35,7 +35,11 @@ class SpecialTestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $st = new SpecialTest();
+        $st->name = $request->name;
+        $st->name_en = $request->name_en;
+        if ($st->save())
+            return $st;
     }
 
     /**
@@ -46,7 +50,7 @@ class SpecialTestController extends Controller
      */
     public function show(SpecialTest $specialTest)
     {
-        //
+        return $specialTest;
     }
 
     /**
@@ -67,9 +71,14 @@ class SpecialTestController extends Controller
      * @param  \App\Models\SpecialTest  $specialTest
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SpecialTest $specialTest)
+    public function update(Request $request, $id)
     {
-        //
+
+        $sp = SpecialTest::findOrFail($id);
+        $sp->name = $request->name;
+        $sp->name_en = $request->name_en;
+       if($sp->save())
+           return $sp;
     }
 
     /**
@@ -78,8 +87,11 @@ class SpecialTestController extends Controller
      * @param  \App\Models\SpecialTest  $specialTest
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SpecialTest $specialTest)
+    public function destroy($id)
     {
-        //
+        $sp = SpecialTest::findOrFail($id);
+        if ($sp->delete()) {
+            return $sp;
+        }
     }
 }
