@@ -19,8 +19,8 @@ class CreateSpecialTestsCentersTable extends Migration
             $table->unsignedBigInteger('special_test_id');
             $table->unsignedBigInteger('center_id');
 
-            $table->foreign('special_test_id')->references('id')->on('special_tests')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('center_id')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
+//            $table->foreign('special_test_id')->references('id')->on('special_tests')->onUpdate('cascade')->onDelete('cascade');
+//            $table->foreign('center_id')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
 
 
             $table->timestamps();

@@ -22,7 +22,7 @@ class CreateCityTable extends Migration
             $table->decimal('longitude');
             $table->timestamps();
 
-            $table->foreign('province')->references('id')->on('province')->onUpdate('cascade')->onDelete('cascade');
+//            $table->foreign('province')->references('id')->on('province')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
