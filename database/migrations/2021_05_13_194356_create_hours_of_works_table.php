@@ -15,26 +15,26 @@ class CreateHoursOfWorksTable extends Migration
     {
         Schema::create('hours_of_works', function (Blueprint $table) {
             $table->id();
-            $table->integer('saturday_start');
-            $table->integer('saturday_end');
+            $table->string('saturday_start')->default("08:00");
+            $table->string('saturday_end')->default("22:00");
 
-            $table->integer('sunday_start');
-            $table->integer('sunday_end');
+            $table->string('sunday_start')->default("08:00");
+            $table->string('sunday_end')->default("22:00");
 
-            $table->integer('monday_start');
-            $table->integer('monday_end');
+            $table->string('monday_start')->default("08:00");
+            $table->string('monday_end')->default("22:00");
 
-            $table->integer('thursday_start');
-            $table->integer('thursday_end');
+            $table->string('thursday_start')->default("08:00");
+            $table->string('thursday_end')->default("22:00");
 
-            $table->integer('wednesday_start');
-            $table->integer('wednesday_end');
+            $table->string('wednesday_start')->default("08:00");
+            $table->string('wednesday_end')->default("22:00");
 
-            $table->integer('tuesday_start');
-            $table->integer('tuesday_end');
+            $table->string('tuesday_start')->default("08:00");
+            $table->string('tuesday_end')->default("22:00");
 
-            $table->integer('friday_start');
-            $table->integer('friday_end');
+            $table->string('friday_start')->default("08:00");
+            $table->string('friday_end')->default("22:00");
             $table->timestamps();
         });
     }
