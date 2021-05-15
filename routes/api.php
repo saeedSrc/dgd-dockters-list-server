@@ -28,11 +28,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/provinces', [LocalInformation::class, 'getProvinces']);
 
-// request: province(int)
+// url parameters: province(int)
 Route::get('/cities', [LocalInformation::class, 'getCities']);
-
-// request:
-Route::get('/centers', [CenterController::class, 'index']);
 
 ////////////////////center_types//////////////////////////////////
 // request:
@@ -97,5 +94,13 @@ Route::delete('/insurance_company/{id}', [InsuranceCompanyController::class, 'de
 ////////// hours of works ///////////////////////////////
 
 
+////////////////////centers//////////////////////////////
 
+// request:
+Route::get('/centers', [CenterController::class, 'index']);
+
+// request:
+Route::post('/center', [CenterController::class, 'store']);
+
+////////////////////centers//////////////////////////////
 

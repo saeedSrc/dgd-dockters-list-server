@@ -35,8 +35,27 @@ class CenterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $center = new Center();
+       $center->name = $request->name;
+       $center->site = $request->site;
+       $center->technical_manager_name = $request->technical_manager_name;
+       $center->country_id = $request->country_id;
+       $center->province_id = $request->province_id;
+       $center->city_id = $request->city_id;
+       $center->area = $request->area;
+       $center->area_name = $request->area_name;
+       $center->discount = $request->discount;
+       $center->satisfaction = $request->satisfaction;
+       $center->hours_of_work_id = $request->hours_of_work_id;
+       $center->governmental_type = $request->governmental_type;
+       $center->type_id = $request->type_id;
+       $center->latitude = $request->latitude;
+       $center->longitude = $request->longitude;
+       $center->logo = $request->logo;
+       if ($center->save())
+       return $center;
     }
+
 
     /**
      * Display the specified resource.
