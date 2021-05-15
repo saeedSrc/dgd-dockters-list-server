@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSpecialTestsCentersTable extends Migration
+class UpdateProvinceTableAddForeignkeys extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateSpecialTestsCentersTable extends Migration
      */
     public function up()
     {
-        Schema::create('special_tests_centers', function (Blueprint $table) {
-            $table->id();
-
-            $table->unsignedBigInteger('special_test_id');
-            $table->unsignedBigInteger('center_id');
-
-            $table->timestamps();
+        Schema::table('province', function (Blueprint $table) {
+            $table->foreign('country')->references('id')->on('countries')->onUpdate('cascade')->onDelete('cascade');;
         });
     }
 
@@ -30,6 +25,8 @@ class CreateSpecialTestsCentersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('special_tests_centers');
+        Schema::table('province', function (Blueprint $table) {
+            //
+        });
     }
 }

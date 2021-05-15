@@ -18,9 +18,8 @@ class CreateCountriesTable extends Migration
             $table->unsignedBigInteger('capital_city');
             $table->string('name');
             $table->string('name_en');
-            $table->timestamps();
 
-//            $table->foreign('capital_city')->references('id')->on('cities')->onUpdate('cascade')->onDelete('cascade');;
+
         });
     }
 

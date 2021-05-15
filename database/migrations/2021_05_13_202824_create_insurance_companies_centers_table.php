@@ -18,8 +18,7 @@ class CreateInsuranceCompaniesCentersTable extends Migration
             $table->unsignedBigInteger('insurance_company_id');
             $table->unsignedBigInteger('center_id');
 
-//            $table->foreign('insurance_company_id')->references('id')->on('insurance_companies')->onUpdate('cascade')->onDelete('cascade');
-//            $table->foreign('center_id')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

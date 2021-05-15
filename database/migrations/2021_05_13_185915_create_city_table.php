@@ -20,9 +20,8 @@ class CreateCityTable extends Migration
             $table->string('name_en');
             $table->decimal('latitude');
             $table->decimal('longitude');
-            $table->timestamps();
 
-//            $table->foreign('province')->references('id')->on('province')->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 
