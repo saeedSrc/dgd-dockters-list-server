@@ -18,7 +18,7 @@ class CreateInsuranceCompaniesTable extends Migration
             $table->enum('type', ['supplementary', 'normal']);
 
             $table->string('name');
-            $table->string('name_en'); // بعدا اضاف شد
+            $table->string('name_en');
             $table->timestamps();
 
         });

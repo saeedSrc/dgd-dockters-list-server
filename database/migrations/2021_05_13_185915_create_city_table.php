@@ -20,8 +20,6 @@ class CreateCityTable extends Migration
             $table->string('name_en')->default(null);
             $table->decimal('latitude');
             $table->decimal('longitude');
-
-
         });
     }
 

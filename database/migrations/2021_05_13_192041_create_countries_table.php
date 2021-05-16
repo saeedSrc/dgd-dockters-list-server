@@ -18,8 +18,6 @@ class CreateCountriesTable extends Migration
             $table->unsignedBigInteger('capital_city');
             $table->string('name');
             $table->string('name_en');
-
-
         });
     }
 

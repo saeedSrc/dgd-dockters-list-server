@@ -38,7 +38,7 @@ class InsuranceCompanyController extends Controller
     {
         $ic = new InsuranceCompany();
         $ic->name = $request->name;
-//        $ic->name_en = $request->name_en;
+        $ic->name_en = $request->name_en;
         $ic->type = $request->type;
         try {
             $ic->save();
@@ -82,7 +82,7 @@ class InsuranceCompanyController extends Controller
     {
         $ic = InsuranceCompany::findOrFail($id);
         $ic->name = $request->name;
-//        $ic->name_en = $request->name_en;
+        $ic->name_en = $request->name_en;
         $ic->type = $request->type;
         try {
             $ic->save();

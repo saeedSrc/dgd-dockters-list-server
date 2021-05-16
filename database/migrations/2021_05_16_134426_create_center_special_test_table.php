@@ -15,11 +15,8 @@ class CreateCenterSpecialTestTable extends Migration
     {
         Schema::create('center_special_test', function (Blueprint $table) {
             $table->id();
-
             $table->unsignedBigInteger('special_test_id');
             $table->unsignedBigInteger('center_id');
-
-
             $table->foreign('special_test_id')->references('id')->on('special_tests')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('center_id')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
 

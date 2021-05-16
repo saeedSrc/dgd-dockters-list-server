@@ -14,8 +14,7 @@ class UpdateCentersTableAddForeignkeys extends Migration
     public function up()
     {
         Schema::table('centers', function (Blueprint $table) {
-
-                        $table->foreign('country_id')->references('id')->on('countries')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('country_id')->references('id')->on('countries')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('province_id')->references('id')->on('provinces')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('city_id')->references('id')->on('cities')->onUpdate('cascade')->onDelete('cascade');;
             $table->foreign('hours_of_work_id')->references('id')->on('hours_of_works')->onUpdate('cascade')->onDelete('cascade');;
