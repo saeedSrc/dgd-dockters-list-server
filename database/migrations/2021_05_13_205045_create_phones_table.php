@@ -18,7 +18,6 @@ class CreatePhonesTable extends Migration
             $table->string('phone');
 
             $table->unsignedBigInteger('center_id');
-
             $table->timestamps();
         });
     }

@@ -99,8 +99,81 @@ Route::delete('/insurance_company/{id}', [InsuranceCompanyController::class, 'de
 // request:
 Route::get('/centers', [CenterController::class, 'index']);
 
-// request:
+// request: name, site, technical_manager_name, country_id,province_id, city_id,
+// area, area_name, discount, satisfaction, hours_of_work_id, governmental_type, type_id, latitude, longitude, logo
 Route::post('/center', [CenterController::class, 'store']);
+
+
+
+//////////////// center phone //////////////////////////////////////////////////
+// request: type: centers or doctors, phone
+Route::post('/phone/{center_id}', [CenterController::class, 'addPhone']);
+
+// request: phone(string) , method = put
+Route::put('/phone/{id}', [CenterController::class, 'updatePhone']);
+
+// request: phone(string) , method = delete
+Route::delete('/phone/{id}', [CenterController::class, 'deletePhone']);
+/////////////////////////center phones/////////////////////////////////////////////////////
+
+
+//////////////// center address //////////////////////////////////////////////////
+// request: type: centers or doctors, address , neighbourhood
+Route::post('/address/{center_id}', [CenterController::class, 'addAddress']);
+
+// request: address(string), neighbourhood , method = put
+Route::put('/address/{id}', [CenterController::class, 'updateAddress']);
+
+// request:  method = delete
+Route::delete('/address/{id}', [CenterController::class, 'deleteAddress']);
+/////////////////////////center address /////////////////////////////////////////////////////
+
+//////////////// center special doctors //////////////////////////////////////////////////
+// request: type: centers , name
+Route::post('/special_doctor/{center_id}', [CenterController::class, 'addSpecialDoctor']);
+
+// request: name(string) , method = put
+Route::put('/special_doctor/{id}', [CenterController::class, 'updateSpecialDoctor']);
+
+// request:  method = delete
+Route::delete('/special_doctor/{id}', [CenterController::class, 'deleteSpecialDoctor']);
+/////////////////////////center special doctors /////////////////////////////////////////////////////
+
+
+/////////////////////////// center images //////////////////////////////////////
+
+// request: type: centers or doctors , image(file)
+Route::post('/image/{center_id}', [CenterController::class, 'addImage']);
+
+// request:  method = delete
+Route::delete('/image/{id}', [CenterController::class, 'deleteImage']);
+
+/////////////////////////// center images //////////////////////////////////////
+
+
+//////////////// center insurance_companies //////////////////////////////////////////////////
+// request: type : centers or doctors, insurance_company_id
+Route::post('/insurance_company_center/{center_id}', [CenterController::class, 'addInsuranceCompanyCenter']);
+
+// request: type: centers or doctors, center_id, insurance_company_id , method = put
+Route::put('/insurance_company_center/{id}', [CenterController::class, 'updateInsuranceCompanyCenter']);
+
+// request:  method = delete
+Route::delete('/insurance_company_center/{id}', [CenterController::class, 'deleteInsuranceCompanyCenter']);
+/////////////////////////center special doctors /////////////////////////////////////////////////////
+
+
+//////////////// center special_test_center //////////////////////////////////////////////////
+// request:  special_test_id
+Route::post('/special_test_center/{center_id}', [CenterController::class, 'addSpecialTestCenter']);
+
+// request:  special_test_id, center_id , method = put
+Route::put('/special_test_center/{id}', [CenterController::class, 'updateSpecialTestCenter']);
+
+// request:  method = delete
+Route::delete('/special_test_center/{id}', [CenterController::class, 'deleteSpecialTestCenter']);
+/////////////////////////center special doctors /////////////////////////////////////////////////////
+
 
 ////////////////////centers//////////////////////////////
 
