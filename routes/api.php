@@ -8,6 +8,8 @@ use App\Http\Controllers\CenterTypeController;
 use App\Http\Controllers\HoursOfWorkController;
 use App\Http\Controllers\SpecialTestController;
 use App\Http\Controllers\InsuranceCompanyController;
+use App\Http\Controllers\CollegeController;
+use App\Http\Controllers\SpecialtyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -182,6 +184,45 @@ Route::put('/special_test_center/{id}', [CenterController::class, 'updateSpecial
 Route::delete('/special_test_center/{id}', [CenterController::class, 'deleteSpecialTestCenter']);
 /////////////////////////center special doctors /////////////////////////////////////////////////////
 
-
 ////////////////////centers//////////////////////////////
+
+
+
+
+
+//////////////////////doctors /////////////////////////////////////////////////////////
+
+
+////////// doctor college ///////////////////////////////
+// request:
+Route::get('/colleges', [CollegeController::class, 'index']);
+
+// request: name,  name_en
+Route::post('/college', [CollegeController::class, 'store']);
+
+// request: name, name_en, method = put
+Route::put('/college/{id}', [CollegeController::class, 'update']);
+
+// request: _method = delete
+Route::delete('/college/{id}', [CollegeController::class, 'destroy']);
+////////// doctor college ///////////////////////////////
+
+
+//////////doctor speciality ///////////////////////////////
+// request:
+Route::get('/specialities', [SpecialtyController::class, 'index']);
+
+// request: name,  name_en
+Route::post('/speciality', [SpecialtyController::class, 'store']);
+
+// request: name, name_en, method = put
+Route::put('/speciality/{id}', [SpecialtyController::class, 'update']);
+
+// request: _method = delete
+Route::delete('/speciality/{id}', [SpecialtyController::class, 'destroy']);
+////////// doctor speciality ///////////////////////////////
+
+
+
+//////////////////////doctors /////////////////////////////////////////////////////////
 

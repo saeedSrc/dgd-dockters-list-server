@@ -14,7 +14,9 @@ class CenterTypeController extends Controller
      */
     public function index()
     {
-        return CenterType::all();
+        $ct =  CenterType::all();
+
+        return $this->successResponse($ct);
     }
 
     /**

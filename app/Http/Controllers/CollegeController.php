@@ -14,7 +14,9 @@ class CollegeController extends Controller
      */
     public function index()
     {
-        //
+        $college =  College::all();
+
+        return $this->successResponse($college);
     }
 
     /**
@@ -35,7 +37,17 @@ class CollegeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $college = new College();
+        $college->name = $request->name;
+        $college->name_en = $request->name_en;
+
+        try {
+            $college->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($college);
     }
 
     /**
@@ -67,9 +79,18 @@ class CollegeController extends Controller
      * @param  \App\Models\College  $college
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, College $college)
+    public function update(Request $request, $id)
     {
-        //
+        $college = College::findOrFail($id);
+        $college->name = $request->name;
+        $college->name_en = $request->name_en;
+        try {
+            $college->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($college);
     }
 
     /**
@@ -78,8 +99,15 @@ class CollegeController extends Controller
      * @param  \App\Models\College  $college
      * @return \Illuminate\Http\Response
      */
-    public function destroy(College $college)
+    public function destroy($id)
     {
-        //
+        $college = College::findOrFail($id);
+        try {
+            $college->delete();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($college);
     }
 }

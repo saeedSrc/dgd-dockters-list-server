@@ -14,7 +14,9 @@ class SpecialtyController extends Controller
      */
     public function index()
     {
-        //
+        $sp =  Specialty::all();
+
+        return $this->successResponse($sp);
     }
 
     /**
@@ -35,7 +37,17 @@ class SpecialtyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $sp = new Specialty();
+        $sp->name = $request->name;
+        $sp->name_en = $request->name_en;
+
+        try {
+            $sp->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($sp);
     }
 
     /**
@@ -67,9 +79,18 @@ class SpecialtyController extends Controller
      * @param  \App\Models\Specialty  $specialty
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Specialty $specialty)
+    public function update(Request $request, $id)
     {
-        //
+         $sp = Specialty::findOrFail($id);
+        $sp->name = $request->name;
+        $sp->name_en = $request->name_en;
+        try {
+            $sp->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($sp);
     }
 
     /**
@@ -78,8 +99,15 @@ class SpecialtyController extends Controller
      * @param  \App\Models\Specialty  $specialty
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Specialty $specialty)
+    public function destroy($id)
     {
-        //
+        $sp = Specialty::findOrFail($id);
+        try {
+            $sp->delete();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($sp);
     }
 }
