@@ -19,6 +19,8 @@ class CreateSpecialDoctorsTable extends Migration
 
             $table->unsignedBigInteger('center_id');
             $table->timestamps();
+
+            $table->foreign('center_id')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
