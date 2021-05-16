@@ -9,6 +9,11 @@ class Doctor extends Model
 {
     use HasFactory;
 
+    public function images()
+    {
+        return $this->hasMany(Image::class, 'doctor_id');
+    }
+
     public function phones()
     {
         return $this->hasMany(Phone::class, 'doctor_id');
