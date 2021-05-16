@@ -10,14 +10,22 @@ class LocalInformation extends Controller
 {
     public function getProvinces(Request $request)
     {
-       return Province::all();
+       $provinces =  Province::all();
+
+       return $this->successResponse($provinces);
     }
 
     public function getCities(Request $request)
     {
         $provinceId = $request->province;
-        $province = Province::Find($provinceId);
-        return $province->cities;
+        try {
+            $province = Province::findOrFail($provinceId);
+            $cities =  $province->cities;
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($cities);
     }
 
 

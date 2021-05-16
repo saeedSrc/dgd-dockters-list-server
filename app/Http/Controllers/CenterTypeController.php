@@ -38,9 +38,14 @@ class CenterTypeController extends Controller
         $centerType = new CenterType();
         $centerType->name = $request->name;
         $centerType->name_en = $request->name_en;
-        if ($centerType->save()) {
-            return $centerType;
+
+        try {
+            $centerType->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
         }
+
+        return $this->successResponse($centerType);
     }
 
     /**
@@ -77,9 +82,13 @@ class CenterTypeController extends Controller
      $ct = CenterType::findOrFail($id);
         $ct->name = $request->name;
         $ct->name_en = $request->name_en;
-        if ($ct->save()) {
-            return $ct;
+        try {
+            $ct->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
         }
+
+        return $this->successResponse($ct);
     }
 
     /**
@@ -91,8 +100,12 @@ class CenterTypeController extends Controller
     public function destroy($id)
     {
         $ct = CenterType::findOrFail($id);
-        if ($ct->delete()) {
-            return $ct;
+        try {
+            $ct->delete();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
         }
+
+        return $this->successResponse($ct);
     }
 }

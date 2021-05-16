@@ -14,7 +14,8 @@ class SpecialTestController extends Controller
      */
     public function index()
     {
-       return SpecialTest::all();
+       $sp =  SpecialTest::all();
+       return $this->successResponse($sp);
     }
 
     /**
@@ -38,8 +39,13 @@ class SpecialTestController extends Controller
         $st = new SpecialTest();
         $st->name = $request->name;
         $st->name_en = $request->name_en;
-        if ($st->save())
-            return $st;
+        try {
+          $st->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($st);
     }
 
     /**
@@ -50,7 +56,7 @@ class SpecialTestController extends Controller
      */
     public function show(SpecialTest $specialTest)
     {
-        return $specialTest;
+//        return $specialTest;
     }
 
     /**
@@ -74,11 +80,16 @@ class SpecialTestController extends Controller
     public function update(Request $request, $id)
     {
 
-        $sp = SpecialTest::findOrFail($id);
-        $sp->name = $request->name;
-        $sp->name_en = $request->name_en;
-       if($sp->save())
-           return $sp;
+        $st = SpecialTest::findOrFail($id);
+        $st->name = $request->name;
+        $st->name_en = $request->name_en;
+        try {
+            $st->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($st);
     }
 
     /**
@@ -89,9 +100,13 @@ class SpecialTestController extends Controller
      */
     public function destroy($id)
     {
-        $sp = SpecialTest::findOrFail($id);
-        if ($sp->delete()) {
-            return $sp;
+        $st = SpecialTest::findOrFail($id);
+        try {
+            $st->delete();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
         }
+
+        return $this->successResponse($st);
     }
 }

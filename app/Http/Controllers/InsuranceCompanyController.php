@@ -14,7 +14,8 @@ class InsuranceCompanyController extends Controller
      */
     public function index()
     {
-       return InsuranceCompany::all();
+       $ic =  InsuranceCompany::all();
+       return $this->successResponse($ic);
     }
 
     /**
@@ -39,8 +40,13 @@ class InsuranceCompanyController extends Controller
         $ic->name = $request->name;
 //        $ic->name_en = $request->name_en;
         $ic->type = $request->type;
-        if ($ic->save())
-            return $ic;
+        try {
+            $ic->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($ic);
     }
 
     /**
@@ -78,8 +84,13 @@ class InsuranceCompanyController extends Controller
         $ic->name = $request->name;
 //        $ic->name_en = $request->name_en;
         $ic->type = $request->type;
-        if ($ic->save())
-            return $ic;
+        try {
+            $ic->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($ic);
     }
 
     /**
@@ -91,8 +102,12 @@ class InsuranceCompanyController extends Controller
     public function destroy($id)
     {
         $ic = InsuranceCompany::findOrFail($id);
-        if ($ic->delete()) {
-            return $ic;
+        try {
+            $ic->delete();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
         }
+
+        return $this->successResponse($ic);
     }
 }

@@ -25,6 +25,21 @@ class CenterController extends Controller
     public function index()
     {
         $centers = Center::with('images', 'phones', 'addresses', 'specialDoctors', 'specialTests', 'insuranceCompanies')->get();
+
+        return $this->successResponse($centers);
+
+    }
+
+
+    /**
+     * Display a listing of the resource by type.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getCentersByType($type_id)
+    {
+        $centers = Center::with('images', 'phones', 'addresses', 'specialDoctors', 'specialTests', 'insuranceCompanies')->where('type_id', $type_id)->get();
+
         return $this->successResponse($centers);
 
     }
@@ -64,8 +79,13 @@ class CenterController extends Controller
         $center->latitude = $request->latitude;
         $center->longitude = $request->longitude;
         $center->logo = $request->logo;
-        if ($center->save())
-            return $center;
+        try {
+            $center->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($center);
     }
 
     /**
@@ -99,7 +119,30 @@ class CenterController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $center  = Center::findOrFail($id);
+        $center->name = $request->name;
+        $center->site = $request->site;
+        $center->technical_manager_name = $request->technical_manager_name;
+        $center->country_id = $request->country_id;
+        $center->province_id = $request->province_id;
+        $center->city_id = $request->city_id;
+        $center->area = $request->area;
+        $center->area_name = $request->area_name;
+        $center->discount = $request->discount;
+        $center->satisfaction = $request->satisfaction;
+        $center->hours_of_work_id = $request->hours_of_work_id;
+        $center->governmental_type = $request->governmental_type;
+        $center->type_id = $request->type_id;
+        $center->latitude = $request->latitude;
+        $center->longitude = $request->longitude;
+        $center->logo = $request->logo;
+        try {
+            $center->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($center);
     }
 
     /**
@@ -110,7 +153,14 @@ class CenterController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $center = Center::findOrFail($id);
+        try {
+            $center->delete();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($center);
     }
 
     /**

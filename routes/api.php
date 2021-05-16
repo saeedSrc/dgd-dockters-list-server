@@ -99,11 +99,19 @@ Route::delete('/insurance_company/{id}', [InsuranceCompanyController::class, 'de
 // request:
 Route::get('/centers', [CenterController::class, 'index']);
 
+// request:
+Route::get('/centers_by_type/{type_id}', [CenterController::class, 'getCentersByType']);
+
 // request: name, site, technical_manager_name, country_id,province_id, city_id,
 // area, area_name, discount, satisfaction, hours_of_work_id, governmental_type, type_id, latitude, longitude, logo
 Route::post('/center', [CenterController::class, 'store']);
 
+// request: name, site, technical_manager_name, country_id,province_id, city_id,
+// area, area_name, discount, satisfaction, hours_of_work_id, governmental_type, type_id, latitude, longitude, logo, method = put
+Route::put('/center/{id}', [CenterController::class, 'update']);
 
+// request: method = delete
+Route::delete('/center/{id}', [CenterController::class, 'destroy']);
 
 //////////////// center phone //////////////////////////////////////////////////
 // request: type: centers or doctors, phone
@@ -112,7 +120,7 @@ Route::post('/phone/{center_id}', [CenterController::class, 'addPhone']);
 // request: phone(string) , method = put
 Route::put('/phone/{id}', [CenterController::class, 'updatePhone']);
 
-// request: phone(string) , method = delete
+// request: method = delete
 Route::delete('/phone/{id}', [CenterController::class, 'deletePhone']);
 /////////////////////////center phones/////////////////////////////////////////////////////
 

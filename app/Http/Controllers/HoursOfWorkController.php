@@ -14,7 +14,8 @@ class HoursOfWorkController extends Controller
      */
     public function index()
     {
-       return HoursOfWork::all();
+       $how = HoursOfWork::all();
+       return $this->successResponse($how);
     }
 
     /**
@@ -66,9 +67,13 @@ class HoursOfWorkController extends Controller
         if ($request->friday_end)
         $HOW->friday_end = $request->friday_end;
 
-       if ($HOW->save()) {
-           return $HOW;
-       }
+        try {
+            $HOW->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($HOW);
     }
 
     /**
@@ -134,9 +139,13 @@ class HoursOfWorkController extends Controller
         if ($request->friday_end)
             $HOW->friday_end = $request->friday_end;
 
-        if ($HOW->save()) {
-            return $HOW;
+        try {
+            $HOW->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
         }
+
+        return $this->successResponse($HOW);
 
     }
 
@@ -149,8 +158,12 @@ class HoursOfWorkController extends Controller
     public function destroy($id)
     {
         $HOW = HoursOfWork::findOrFail($id);
-        if ($HOW->delete()) {
-            return $HOW;
+        try {
+            $HOW->delete();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
         }
+
+        return $this->successResponse($HOW);
     }
 }
