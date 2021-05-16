@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ae52048-762a-43c4-8bc7-8b5f712d2224" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/constants.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CenterController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CenterController.php" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_13_205045_create_phones_table.php" afterPath="$PROJECT_DIR$/database/migrations/2021_05_13_205045_create_phones_table.php" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Center.php" afterPath="$PROJECT_DIR$/app/Models/Center.php" />
+      <change beforePath="$PROJECT_DIR$/app/Models/InsuranceCompaniesCenter.php" afterPath="$PROJECT_DIR$/app/Models/CenterInsuranceCompany.php" />
+      <change beforePath="$PROJECT_DIR$/app/Models/SpecialTestsCenter.php" afterPath="$PROJECT_DIR$/app/Models/CenterSpecialTest.php" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_13_202824_create_insurance_companies_centers_table.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_13_203841_create_special_tests_centers_table.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_15_085109_update_insurance_companies_centers_table_add_foreignkeys.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_15_085126_update_special_tests_centers_table_add_foreignkeys.php" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,139 +24,156 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="99" column="54" lean-forward="false" selection-start-line="99" selection-start-column="54" selection-end-line="99" selection-end-column="54" />
-              <folding>
-                <element signature="e#7#35#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CenterController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CenterController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CenterController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+              <caret line="26" column="118" lean-forward="false" selection-start-line="26" selection-start-column="118" selection-end-line="26" selection-end-column="118" />
               <folding>
-                <element signature="e#420#521#0#PHP" expanded="false" />
-                <element signature="e#597#706#0#PHP" expanded="false" />
-                <element signature="e#711#758#0#PHP" expanded="false" />
-                <element signature="e#764#922#0#PHP" expanded="false" />
-                <element signature="e#927#1883#0#PHP" expanded="false" />
-                <element signature="e#1889#2010#0#PHP" expanded="false" />
-                <element signature="e#2015#2063#0#PHP" expanded="false" />
-                <element signature="e#2069#2208#0#PHP" expanded="false" />
-                <element signature="e#2213#2261#0#PHP" expanded="false" />
-                <element signature="e#2267#2447#0#PHP" expanded="false" />
-                <element signature="e#2452#2520#0#PHP" expanded="false" />
-                <element signature="e#2526#2659#0#PHP" expanded="false" />
-                <element signature="e#2664#2715#0#PHP" expanded="false" />
-                <element signature="e#2721#2867#0#PHP" expanded="false" />
-                <element signature="e#2872#3366#0#PHP" expanded="false" />
-                <element signature="e#3037#3109#0#PHP" expanded="false" />
-                <element signature="e#3119#3180#0#PHP" expanded="false" />
-                <element signature="e#3190#3312#0#PHP" expanded="false" />
-                <element signature="e#3234#3312#0#PHP" expanded="false" />
-                <element signature="e#3372#3511#0#PHP" expanded="false" />
-                <element signature="e#3516#3840#0#PHP" expanded="false" />
-                <element signature="e#3664#3786#0#PHP" expanded="false" />
-                <element signature="e#3708#3786#0#PHP" expanded="false" />
-                <element signature="e#3846#3985#0#PHP" expanded="false" />
-                <element signature="e#3990#4256#0#PHP" expanded="false" />
-                <element signature="e#4078#4202#0#PHP" expanded="false" />
-                <element signature="e#4124#4202#0#PHP" expanded="false" />
-                <element signature="e#4262#4412#0#PHP" expanded="false" />
-                <element signature="e#4417#4988#0#PHP" expanded="false" />
-                <element signature="e#4653#4727#0#PHP" expanded="false" />
-                <element signature="e#4737#4798#0#PHP" expanded="false" />
-                <element signature="e#4808#4932#0#PHP" expanded="false" />
-                <element signature="e#4854#4932#0#PHP" expanded="false" />
-                <element signature="e#4994#5137#0#PHP" expanded="false" />
-                <element signature="e#5142#5541#0#PHP" expanded="false" />
-                <element signature="e#5361#5485#0#PHP" expanded="false" />
-                <element signature="e#5407#5485#0#PHP" expanded="false" />
-                <element signature="e#5547#5690#0#PHP" expanded="false" />
-                <element signature="e#5695#5971#0#PHP" expanded="false" />
-                <element signature="e#5789#5915#0#PHP" expanded="false" />
-                <element signature="e#5837#5915#0#PHP" expanded="false" />
-                <element signature="e#5977#6131#0#PHP" expanded="false" />
-                <element signature="e#6136#6479#0#PHP" expanded="false" />
-                <element signature="e#6309#6428#0#PHP" expanded="false" />
-                <element signature="e#6350#6428#0#PHP" expanded="false" />
-                <element signature="e#6485#6632#0#PHP" expanded="false" />
-                <element signature="e#6637#6963#0#PHP" expanded="false" />
-                <element signature="e#6793#6912#0#PHP" expanded="false" />
-                <element signature="e#6834#6912#0#PHP" expanded="false" />
-                <element signature="e#6969#7116#0#PHP" expanded="false" />
-                <element signature="e#7121#7394#0#PHP" expanded="false" />
-                <element signature="e#7222#7343#0#PHP" expanded="false" />
-                <element signature="e#7265#7343#0#PHP" expanded="false" />
-                <element signature="e#7400#7513#0#PHP" expanded="false" />
-                <element signature="e#7518#8287#0#PHP" expanded="false" />
-                <element signature="e#7643#8100#0#PHP" expanded="false" />
-                <element signature="e#7681#8090#0#PHP" expanded="false" />
-                <element signature="e#7730#8076#0#PHP" expanded="false" />
-                <element signature="e#8111#8233#0#PHP" expanded="false" />
-                <element signature="e#8155#8233#0#PHP" expanded="false" />
-                <element signature="e#8293#8403#0#PHP" expanded="false" />
-                <element signature="e#8408#8674#0#PHP" expanded="false" />
-                <element signature="e#8496#8620#0#PHP" expanded="false" />
-                <element signature="e#8542#8620#0#PHP" expanded="false" />
-                <element signature="e#8680#8837#0#PHP" expanded="false" />
-                <element signature="e#8842#9453#0#PHP" expanded="false" />
-                <element signature="e#9066#9200#0#PHP" expanded="false" />
-                <element signature="e#9210#9271#0#PHP" expanded="false" />
-                <element signature="e#9281#9401#0#PHP" expanded="false" />
-                <element signature="e#9323#9401#0#PHP" expanded="false" />
-                <element signature="e#9459#9609#0#PHP" expanded="false" />
-                <element signature="e#9614#10292#0#PHP" expanded="false" />
-                <element signature="e#9852#10039#0#PHP" expanded="false" />
-                <element signature="e#10049#10110#0#PHP" expanded="false" />
-                <element signature="e#10120#10240#0#PHP" expanded="false" />
-                <element signature="e#10162#10240#0#PHP" expanded="false" />
-                <element signature="e#10298#10448#0#PHP" expanded="false" />
-                <element signature="e#10453#10749#0#PHP" expanded="false" />
-                <element signature="e#10575#10697#0#PHP" expanded="false" />
-                <element signature="e#10619#10697#0#PHP" expanded="false" />
-                <element signature="e#10755#10885#0#PHP" expanded="false" />
-                <element signature="e#10890#11314#0#PHP" expanded="false" />
-                <element signature="e#11142#11262#0#PHP" expanded="false" />
-                <element signature="e#11184#11262#0#PHP" expanded="false" />
-                <element signature="e#11320#11509#0#PHP" expanded="false" />
-                <element signature="e#11514#11925#0#PHP" expanded="false" />
-                <element signature="e#11753#11873#0#PHP" expanded="false" />
-                <element signature="e#11795#11873#0#PHP" expanded="false" />
-                <element signature="e#11931#12048#0#PHP" expanded="false" />
-                <element signature="e#12053#12338#0#PHP" expanded="false" />
-                <element signature="e#12164#12286#0#PHP" expanded="false" />
-                <element signature="e#12208#12286#0#PHP" expanded="false" />
+                <element signature="e#417#518#0#PHP" expanded="false" />
+                <element signature="e#719#828#0#PHP" expanded="false" />
+                <element signature="e#833#880#0#PHP" expanded="false" />
+                <element signature="e#886#1044#0#PHP" expanded="false" />
+                <element signature="e#1049#2005#0#PHP" expanded="false" />
+                <element signature="e#2011#2132#0#PHP" expanded="false" />
+                <element signature="e#2137#2185#0#PHP" expanded="false" />
+                <element signature="e#2191#2330#0#PHP" expanded="false" />
+                <element signature="e#2335#2383#0#PHP" expanded="false" />
+                <element signature="e#2389#2569#0#PHP" expanded="false" />
+                <element signature="e#2574#2642#0#PHP" expanded="false" />
+                <element signature="e#2648#2781#0#PHP" expanded="false" />
+                <element signature="e#2786#2837#0#PHP" expanded="false" />
+                <element signature="e#2843#2989#0#PHP" expanded="false" />
+                <element signature="e#2994#3488#0#PHP" expanded="false" />
+                <element signature="e#3159#3231#0#PHP" expanded="false" />
+                <element signature="e#3241#3302#0#PHP" expanded="false" />
+                <element signature="e#3312#3434#0#PHP" expanded="false" />
+                <element signature="e#3356#3434#0#PHP" expanded="false" />
+                <element signature="e#3494#3633#0#PHP" expanded="false" />
+                <element signature="e#3638#3962#0#PHP" expanded="false" />
+                <element signature="e#3786#3908#0#PHP" expanded="false" />
+                <element signature="e#3830#3908#0#PHP" expanded="false" />
+                <element signature="e#3968#4107#0#PHP" expanded="false" />
+                <element signature="e#4112#4378#0#PHP" expanded="false" />
+                <element signature="e#4200#4324#0#PHP" expanded="false" />
+                <element signature="e#4246#4324#0#PHP" expanded="false" />
+                <element signature="e#4384#4534#0#PHP" expanded="false" />
+                <element signature="e#4539#5110#0#PHP" expanded="false" />
+                <element signature="e#4775#4849#0#PHP" expanded="false" />
+                <element signature="e#4859#4920#0#PHP" expanded="false" />
+                <element signature="e#4930#5054#0#PHP" expanded="false" />
+                <element signature="e#4976#5054#0#PHP" expanded="false" />
+                <element signature="e#5116#5259#0#PHP" expanded="false" />
+                <element signature="e#5264#5663#0#PHP" expanded="false" />
+                <element signature="e#5483#5607#0#PHP" expanded="false" />
+                <element signature="e#5529#5607#0#PHP" expanded="false" />
+                <element signature="e#5669#5812#0#PHP" expanded="false" />
+                <element signature="e#5817#6093#0#PHP" expanded="false" />
+                <element signature="e#5911#6037#0#PHP" expanded="false" />
+                <element signature="e#5959#6037#0#PHP" expanded="false" />
+                <element signature="e#6099#6253#0#PHP" expanded="false" />
+                <element signature="e#6258#6601#0#PHP" expanded="false" />
+                <element signature="e#6431#6550#0#PHP" expanded="false" />
+                <element signature="e#6472#6550#0#PHP" expanded="false" />
+                <element signature="e#6607#6754#0#PHP" expanded="false" />
+                <element signature="e#6759#7085#0#PHP" expanded="false" />
+                <element signature="e#6915#7034#0#PHP" expanded="false" />
+                <element signature="e#6956#7034#0#PHP" expanded="false" />
+                <element signature="e#7091#7238#0#PHP" expanded="false" />
+                <element signature="e#7243#7516#0#PHP" expanded="false" />
+                <element signature="e#7344#7465#0#PHP" expanded="false" />
+                <element signature="e#7387#7465#0#PHP" expanded="false" />
+                <element signature="e#7522#7635#0#PHP" expanded="false" />
+                <element signature="e#7640#8409#0#PHP" expanded="false" />
+                <element signature="e#7765#8222#0#PHP" expanded="false" />
+                <element signature="e#7803#8212#0#PHP" expanded="false" />
+                <element signature="e#7852#8198#0#PHP" expanded="false" />
+                <element signature="e#8233#8355#0#PHP" expanded="false" />
+                <element signature="e#8277#8355#0#PHP" expanded="false" />
+                <element signature="e#8415#8525#0#PHP" expanded="false" />
+                <element signature="e#8530#8796#0#PHP" expanded="false" />
+                <element signature="e#8618#8742#0#PHP" expanded="false" />
+                <element signature="e#8664#8742#0#PHP" expanded="false" />
+                <element signature="e#8802#8959#0#PHP" expanded="false" />
+                <element signature="e#8964#9573#0#PHP" expanded="false" />
+                <element signature="e#9186#9320#0#PHP" expanded="false" />
+                <element signature="e#9330#9391#0#PHP" expanded="false" />
+                <element signature="e#9401#9521#0#PHP" expanded="false" />
+                <element signature="e#9443#9521#0#PHP" expanded="false" />
+                <element signature="e#9579#9729#0#PHP" expanded="false" />
+                <element signature="e#9734#10410#0#PHP" expanded="false" />
+                <element signature="e#9970#10157#0#PHP" expanded="false" />
+                <element signature="e#10167#10228#0#PHP" expanded="false" />
+                <element signature="e#10238#10358#0#PHP" expanded="false" />
+                <element signature="e#10280#10358#0#PHP" expanded="false" />
+                <element signature="e#10416#10566#0#PHP" expanded="false" />
+                <element signature="e#10571#10865#0#PHP" expanded="false" />
+                <element signature="e#10691#10813#0#PHP" expanded="false" />
+                <element signature="e#10735#10813#0#PHP" expanded="false" />
+                <element signature="e#10871#11001#0#PHP" expanded="false" />
+                <element signature="e#11257#11377#0#PHP" expanded="false" />
+                <element signature="e#11299#11377#0#PHP" expanded="false" />
+                <element signature="e#11435#11624#0#PHP" expanded="false" />
+                <element signature="e#11629#12039#0#PHP" expanded="false" />
+                <element signature="e#11867#11987#0#PHP" expanded="false" />
+                <element signature="e#11909#11987#0#PHP" expanded="false" />
+                <element signature="e#12045#12162#0#PHP" expanded="false" />
+                <element signature="e#12167#12451#0#PHP" expanded="false" />
+                <element signature="e#12277#12399#0#PHP" expanded="false" />
+                <element signature="e#12321#12399#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsuranceCompaniesCenter.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/InsuranceCompaniesCenter.php">
+      <file leaf-file-name="Center.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Center.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="30" />
+            <state relative-caret-position="533">
+              <caret line="37" column="46" lean-forward="false" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <file leaf-file-name="CenterInsuranceCompany.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Models/CenterInsuranceCompany.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            <state relative-caret-position="198">
+              <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
               <folding>
-                <element signature="e#40#97#0#PHP" expanded="true" />
+                <element signature="e#30#84#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2021_05_13_201349_create_insurance_companies_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_201349_create_insurance_companies_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2021_05_16_135539_create_center_insurance_company_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_16_135539_create_center_insurance_company_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="167" column="82" lean-forward="false" selection-start-line="167" selection-start-column="82" selection-end-line="167" selection-end-column="82" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,8 +197,15 @@
       <find>getRouteForMethods</find>
       <find>updateInsuranceCompany</find>
       <find>ticket_question_img_path</find>
-      <find>phone</find>
       <find>Route</find>
+      <find>specia</find>
+      <find>SpecialTestsCenter</find>
+      <find>CenterSpecialTest</find>
+      <find>phone</find>
+      <find>addSpecialTestCenter</find>
+      <find>CenterInsuranceCompany</find>
+      <find>center_ce</find>
+      <find>specialtes</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -195,15 +222,10 @@
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_181947_create_centers_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_190927_create_centers_types_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_191153_create_center_types_table.php" />
-        <option value="$PROJECT_DIR$/app/Models/CenterType.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_203621_create_special_tests_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_204527_create_addresses_table.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_182123_create_centers_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2021_05_13_202824_create_insurance_companies_centers_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2021_05_15_085109_update_insurance_companies_centers_table_add_foreignkeys.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2021_05_13_203841_create_special_tests_centers_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2021_05_15_085126_update_special_tests_centers_table_add_foreignkeys.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_15_085240_update_phones_table_add_foreignkeys.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_13_205750_create_special_doctors_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_15_085254_update_special_doctors_table_add_foreignkeys.php" />
@@ -233,7 +255,19 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/config/constants.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Models/CenterType.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_15_085126_update_special_tests_centers_table_add_foreignkeys.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_13_203841_create_special_tests_centers_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/SpecialTestsCenter.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_16_133825_create_special_test_center_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_16_134426_create_center_special_test_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/CenterSpecialTest.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_15_085109_update_insurance_companies_centers_table_add_foreignkeys.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_13_202824_create_insurance_companies_centers_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_16_135539_create_center_insurance_company_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CenterController.php" />
+        <option value="$PROJECT_DIR$/app/Models/Center.php" />
+        <option value="$PROJECT_DIR$/app/Models/CenterInsuranceCompany.php" />
       </list>
     </option>
   </component>
@@ -458,12 +492,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620923065382</updated>
-      <workItem from="1620923066799" duration="56957000" />
+      <workItem from="1620923066799" duration="60661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56957000" />
+    <option name="totallyTimeSpent" value="60661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -501,54 +535,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_190927_create_centers_types_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_15_084348_update_centers_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_15_084522_update_centers_table_add_foreignkeys.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_15_085126_update_special_tests_centers_table_add_foreignkeys.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="116" lean-forward="false" selection-start-line="17" selection-start-column="116" selection-end-line="17" selection-end-column="116" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_15_085240_update_phones_table_add_foreignkeys.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="16" column="116" lean-forward="false" selection-start-line="16" selection-start-column="116" selection-end-line="16" selection-end-column="116" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_15_085018_update_images_table_add_foreignkeys.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_15_085254_update_special_doctors_table_add_foreignkeys.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -561,14 +547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_15_085109_update_insurance_companies_centers_table_add_foreignkeys.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="116" lean-forward="false" selection-start-line="17" selection-start-column="116" selection-end-line="17" selection-end-column="116" />
           <folding />
         </state>
       </provider>
@@ -621,42 +599,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Province.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="14" column="52" lean-forward="false" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/City.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Center.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Center.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/InsuranceCompany.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -669,14 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/CenterType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_194356_create_hours_of_works_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -685,26 +623,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/HoursOfWork.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="121" lean-forward="false" selection-start-line="11" selection-start-column="109" selection-end-line="11" selection-end-column="121" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_203621_create_special_tests_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -786,14 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_182123_create_centers_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="39" column="76" lean-forward="false" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_205045_create_phones_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -815,7 +729,7 @@
         <state relative-caret-position="327">
           <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding>
-            <element signature="e#40#97#0#PHP" expanded="true" />
+            <element signature="e#40#97#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -824,14 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="76" column="4" lean-forward="false" selection-start-line="76" selection-start-column="4" selection-end-line="81" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Phone.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -852,42 +758,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_201349_create_insurance_companies_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_202824_create_insurance_companies_centers_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="17" column="60" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_203841_create_special_tests_centers_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_195723_create_images_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
           <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/InsuranceCompaniesCenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -905,113 +779,274 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/InsuranceCompany.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Phone.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/HoursOfWork.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="11" column="121" lean-forward="false" selection-start-line="11" selection-start-column="109" selection-end-line="11" selection-end-column="121" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/City.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Province.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/CenterType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_203621_create_special_tests_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_182123_create_centers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="39" column="76" lean-forward="false" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_15_085126_update_special_tests_centers_table_add_foreignkeys.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_203841_create_special_tests_centers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_16_133825_create_special_test_center_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="25" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="99" column="54" lean-forward="false" selection-start-line="99" selection-start-column="54" selection-end-line="99" selection-end-column="54" />
+        <state relative-caret-position="235">
+          <caret line="167" column="82" lean-forward="false" selection-start-line="167" selection-start-column="82" selection-end-line="167" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_16_134426_create_center_special_test_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_15_085109_update_insurance_companies_centers_table_add_foreignkeys.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_202824_create_insurance_companies_centers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="24" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/CenterSpecialTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="45" />
           <folding>
-            <element signature="e#7#35#0#PHP" expanded="true" />
+            <element signature="e#30#84#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_16_135539_create_center_insurance_company_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_13_201349_create_insurance_companies_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CenterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <caret line="26" column="118" lean-forward="false" selection-start-line="26" selection-start-column="118" selection-end-line="26" selection-end-column="118" />
           <folding>
-            <element signature="e#420#521#0#PHP" expanded="false" />
-            <element signature="e#597#706#0#PHP" expanded="false" />
-            <element signature="e#711#758#0#PHP" expanded="false" />
-            <element signature="e#764#922#0#PHP" expanded="false" />
-            <element signature="e#927#1883#0#PHP" expanded="false" />
-            <element signature="e#1889#2010#0#PHP" expanded="false" />
-            <element signature="e#2015#2063#0#PHP" expanded="false" />
-            <element signature="e#2069#2208#0#PHP" expanded="false" />
-            <element signature="e#2213#2261#0#PHP" expanded="false" />
-            <element signature="e#2267#2447#0#PHP" expanded="false" />
-            <element signature="e#2452#2520#0#PHP" expanded="false" />
-            <element signature="e#2526#2659#0#PHP" expanded="false" />
-            <element signature="e#2664#2715#0#PHP" expanded="false" />
-            <element signature="e#2721#2867#0#PHP" expanded="false" />
-            <element signature="e#2872#3366#0#PHP" expanded="false" />
-            <element signature="e#3037#3109#0#PHP" expanded="false" />
-            <element signature="e#3119#3180#0#PHP" expanded="false" />
-            <element signature="e#3190#3312#0#PHP" expanded="false" />
-            <element signature="e#3234#3312#0#PHP" expanded="false" />
-            <element signature="e#3372#3511#0#PHP" expanded="false" />
-            <element signature="e#3516#3840#0#PHP" expanded="false" />
-            <element signature="e#3664#3786#0#PHP" expanded="false" />
-            <element signature="e#3708#3786#0#PHP" expanded="false" />
-            <element signature="e#3846#3985#0#PHP" expanded="false" />
-            <element signature="e#3990#4256#0#PHP" expanded="false" />
-            <element signature="e#4078#4202#0#PHP" expanded="false" />
-            <element signature="e#4124#4202#0#PHP" expanded="false" />
-            <element signature="e#4262#4412#0#PHP" expanded="false" />
-            <element signature="e#4417#4988#0#PHP" expanded="false" />
-            <element signature="e#4653#4727#0#PHP" expanded="false" />
-            <element signature="e#4737#4798#0#PHP" expanded="false" />
-            <element signature="e#4808#4932#0#PHP" expanded="false" />
-            <element signature="e#4854#4932#0#PHP" expanded="false" />
-            <element signature="e#4994#5137#0#PHP" expanded="false" />
-            <element signature="e#5142#5541#0#PHP" expanded="false" />
-            <element signature="e#5361#5485#0#PHP" expanded="false" />
-            <element signature="e#5407#5485#0#PHP" expanded="false" />
-            <element signature="e#5547#5690#0#PHP" expanded="false" />
-            <element signature="e#5695#5971#0#PHP" expanded="false" />
-            <element signature="e#5789#5915#0#PHP" expanded="false" />
-            <element signature="e#5837#5915#0#PHP" expanded="false" />
-            <element signature="e#5977#6131#0#PHP" expanded="false" />
-            <element signature="e#6136#6479#0#PHP" expanded="false" />
-            <element signature="e#6309#6428#0#PHP" expanded="false" />
-            <element signature="e#6350#6428#0#PHP" expanded="false" />
-            <element signature="e#6485#6632#0#PHP" expanded="false" />
-            <element signature="e#6637#6963#0#PHP" expanded="false" />
-            <element signature="e#6793#6912#0#PHP" expanded="false" />
-            <element signature="e#6834#6912#0#PHP" expanded="false" />
-            <element signature="e#6969#7116#0#PHP" expanded="false" />
-            <element signature="e#7121#7394#0#PHP" expanded="false" />
-            <element signature="e#7222#7343#0#PHP" expanded="false" />
-            <element signature="e#7265#7343#0#PHP" expanded="false" />
-            <element signature="e#7400#7513#0#PHP" expanded="false" />
-            <element signature="e#7518#8287#0#PHP" expanded="false" />
-            <element signature="e#7643#8100#0#PHP" expanded="false" />
-            <element signature="e#7681#8090#0#PHP" expanded="false" />
-            <element signature="e#7730#8076#0#PHP" expanded="false" />
-            <element signature="e#8111#8233#0#PHP" expanded="false" />
-            <element signature="e#8155#8233#0#PHP" expanded="false" />
-            <element signature="e#8293#8403#0#PHP" expanded="false" />
-            <element signature="e#8408#8674#0#PHP" expanded="false" />
-            <element signature="e#8496#8620#0#PHP" expanded="false" />
-            <element signature="e#8542#8620#0#PHP" expanded="false" />
-            <element signature="e#8680#8837#0#PHP" expanded="false" />
-            <element signature="e#8842#9453#0#PHP" expanded="false" />
-            <element signature="e#9066#9200#0#PHP" expanded="false" />
-            <element signature="e#9210#9271#0#PHP" expanded="false" />
-            <element signature="e#9281#9401#0#PHP" expanded="false" />
-            <element signature="e#9323#9401#0#PHP" expanded="false" />
-            <element signature="e#9459#9609#0#PHP" expanded="false" />
-            <element signature="e#9614#10292#0#PHP" expanded="false" />
-            <element signature="e#9852#10039#0#PHP" expanded="false" />
-            <element signature="e#10049#10110#0#PHP" expanded="false" />
-            <element signature="e#10120#10240#0#PHP" expanded="false" />
-            <element signature="e#10162#10240#0#PHP" expanded="false" />
-            <element signature="e#10298#10448#0#PHP" expanded="false" />
-            <element signature="e#10453#10749#0#PHP" expanded="false" />
-            <element signature="e#10575#10697#0#PHP" expanded="false" />
-            <element signature="e#10619#10697#0#PHP" expanded="false" />
-            <element signature="e#10755#10885#0#PHP" expanded="false" />
-            <element signature="e#10890#11314#0#PHP" expanded="false" />
-            <element signature="e#11142#11262#0#PHP" expanded="false" />
-            <element signature="e#11184#11262#0#PHP" expanded="false" />
-            <element signature="e#11320#11509#0#PHP" expanded="false" />
-            <element signature="e#11514#11925#0#PHP" expanded="false" />
-            <element signature="e#11753#11873#0#PHP" expanded="false" />
-            <element signature="e#11795#11873#0#PHP" expanded="false" />
-            <element signature="e#11931#12048#0#PHP" expanded="false" />
-            <element signature="e#12053#12338#0#PHP" expanded="false" />
-            <element signature="e#12164#12286#0#PHP" expanded="false" />
-            <element signature="e#12208#12286#0#PHP" expanded="false" />
+            <element signature="e#417#518#0#PHP" expanded="false" />
+            <element signature="e#719#828#0#PHP" expanded="false" />
+            <element signature="e#833#880#0#PHP" expanded="false" />
+            <element signature="e#886#1044#0#PHP" expanded="false" />
+            <element signature="e#1049#2005#0#PHP" expanded="false" />
+            <element signature="e#2011#2132#0#PHP" expanded="false" />
+            <element signature="e#2137#2185#0#PHP" expanded="false" />
+            <element signature="e#2191#2330#0#PHP" expanded="false" />
+            <element signature="e#2335#2383#0#PHP" expanded="false" />
+            <element signature="e#2389#2569#0#PHP" expanded="false" />
+            <element signature="e#2574#2642#0#PHP" expanded="false" />
+            <element signature="e#2648#2781#0#PHP" expanded="false" />
+            <element signature="e#2786#2837#0#PHP" expanded="false" />
+            <element signature="e#2843#2989#0#PHP" expanded="false" />
+            <element signature="e#2994#3488#0#PHP" expanded="false" />
+            <element signature="e#3159#3231#0#PHP" expanded="false" />
+            <element signature="e#3241#3302#0#PHP" expanded="false" />
+            <element signature="e#3312#3434#0#PHP" expanded="false" />
+            <element signature="e#3356#3434#0#PHP" expanded="false" />
+            <element signature="e#3494#3633#0#PHP" expanded="false" />
+            <element signature="e#3638#3962#0#PHP" expanded="false" />
+            <element signature="e#3786#3908#0#PHP" expanded="false" />
+            <element signature="e#3830#3908#0#PHP" expanded="false" />
+            <element signature="e#3968#4107#0#PHP" expanded="false" />
+            <element signature="e#4112#4378#0#PHP" expanded="false" />
+            <element signature="e#4200#4324#0#PHP" expanded="false" />
+            <element signature="e#4246#4324#0#PHP" expanded="false" />
+            <element signature="e#4384#4534#0#PHP" expanded="false" />
+            <element signature="e#4539#5110#0#PHP" expanded="false" />
+            <element signature="e#4775#4849#0#PHP" expanded="false" />
+            <element signature="e#4859#4920#0#PHP" expanded="false" />
+            <element signature="e#4930#5054#0#PHP" expanded="false" />
+            <element signature="e#4976#5054#0#PHP" expanded="false" />
+            <element signature="e#5116#5259#0#PHP" expanded="false" />
+            <element signature="e#5264#5663#0#PHP" expanded="false" />
+            <element signature="e#5483#5607#0#PHP" expanded="false" />
+            <element signature="e#5529#5607#0#PHP" expanded="false" />
+            <element signature="e#5669#5812#0#PHP" expanded="false" />
+            <element signature="e#5817#6093#0#PHP" expanded="false" />
+            <element signature="e#5911#6037#0#PHP" expanded="false" />
+            <element signature="e#5959#6037#0#PHP" expanded="false" />
+            <element signature="e#6099#6253#0#PHP" expanded="false" />
+            <element signature="e#6258#6601#0#PHP" expanded="false" />
+            <element signature="e#6431#6550#0#PHP" expanded="false" />
+            <element signature="e#6472#6550#0#PHP" expanded="false" />
+            <element signature="e#6607#6754#0#PHP" expanded="false" />
+            <element signature="e#6759#7085#0#PHP" expanded="false" />
+            <element signature="e#6915#7034#0#PHP" expanded="false" />
+            <element signature="e#6956#7034#0#PHP" expanded="false" />
+            <element signature="e#7091#7238#0#PHP" expanded="false" />
+            <element signature="e#7243#7516#0#PHP" expanded="false" />
+            <element signature="e#7344#7465#0#PHP" expanded="false" />
+            <element signature="e#7387#7465#0#PHP" expanded="false" />
+            <element signature="e#7522#7635#0#PHP" expanded="false" />
+            <element signature="e#7640#8409#0#PHP" expanded="false" />
+            <element signature="e#7765#8222#0#PHP" expanded="false" />
+            <element signature="e#7803#8212#0#PHP" expanded="false" />
+            <element signature="e#7852#8198#0#PHP" expanded="false" />
+            <element signature="e#8233#8355#0#PHP" expanded="false" />
+            <element signature="e#8277#8355#0#PHP" expanded="false" />
+            <element signature="e#8415#8525#0#PHP" expanded="false" />
+            <element signature="e#8530#8796#0#PHP" expanded="false" />
+            <element signature="e#8618#8742#0#PHP" expanded="false" />
+            <element signature="e#8664#8742#0#PHP" expanded="false" />
+            <element signature="e#8802#8959#0#PHP" expanded="false" />
+            <element signature="e#8964#9573#0#PHP" expanded="false" />
+            <element signature="e#9186#9320#0#PHP" expanded="false" />
+            <element signature="e#9330#9391#0#PHP" expanded="false" />
+            <element signature="e#9401#9521#0#PHP" expanded="false" />
+            <element signature="e#9443#9521#0#PHP" expanded="false" />
+            <element signature="e#9579#9729#0#PHP" expanded="false" />
+            <element signature="e#9734#10410#0#PHP" expanded="false" />
+            <element signature="e#9970#10157#0#PHP" expanded="false" />
+            <element signature="e#10167#10228#0#PHP" expanded="false" />
+            <element signature="e#10238#10358#0#PHP" expanded="false" />
+            <element signature="e#10280#10358#0#PHP" expanded="false" />
+            <element signature="e#10416#10566#0#PHP" expanded="false" />
+            <element signature="e#10571#10865#0#PHP" expanded="false" />
+            <element signature="e#10691#10813#0#PHP" expanded="false" />
+            <element signature="e#10735#10813#0#PHP" expanded="false" />
+            <element signature="e#10871#11001#0#PHP" expanded="false" />
+            <element signature="e#11257#11377#0#PHP" expanded="false" />
+            <element signature="e#11299#11377#0#PHP" expanded="false" />
+            <element signature="e#11435#11624#0#PHP" expanded="false" />
+            <element signature="e#11629#12039#0#PHP" expanded="false" />
+            <element signature="e#11867#11987#0#PHP" expanded="false" />
+            <element signature="e#11909#11987#0#PHP" expanded="false" />
+            <element signature="e#12045#12162#0#PHP" expanded="false" />
+            <element signature="e#12167#12451#0#PHP" expanded="false" />
+            <element signature="e#12277#12399#0#PHP" expanded="false" />
+            <element signature="e#12321#12399#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Center.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="37" column="46" lean-forward="false" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/CenterInsuranceCompany.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding>
+            <element signature="e#30#84#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

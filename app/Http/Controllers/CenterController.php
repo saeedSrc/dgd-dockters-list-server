@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Address;
 use App\Models\Center;
 use App\Models\Image;
-use App\Models\InsuranceCompaniesCenter;
+use App\Models\CenterInsuranceCompany;
 use App\Models\InsuranceCompany;
 use App\Models\InsuranceCompanyCenter;
 use App\Models\Phone;
 use App\Models\SpecialDoctor;
-use App\Models\SpecialTestsCenter;
+use App\Models\CenterSpecialTest;
 use Faker\Provider\PhoneNumber;
 use Illuminate\Http\Request;
 
@@ -24,7 +24,9 @@ class CenterController extends Controller
      */
     public function index()
     {
-        return Center::all();
+        $centers = Center::with('images', 'phones', 'addresses', 'specialDoctors', 'specialTests', 'insuranceCompanies')->get();
+        return $centers;
+
     }
 
     /**
@@ -374,7 +376,7 @@ class CenterController extends Controller
     public function addInsuranceCompanyCenter(Request $request, $id)
     {
 
-        $icc = new InsuranceCompaniesCenter();
+        $icc = new CenterInsuranceCompany();
         $insurance_company_id = $request->insurance_company_id;
         $type = $request->type;
 
@@ -406,7 +408,7 @@ class CenterController extends Controller
     public function updateInsuranceCompanyCenter(Request $request, $id)
     {
 
-        $icc = InsuranceCompaniesCenter::findOrFail($id);
+        $icc = CenterInsuranceCompany::findOrFail($id);
         $insurance_company_id = $request->insurance_company_id;
         $type = $request->type;
 
@@ -438,7 +440,7 @@ class CenterController extends Controller
      */
     public function deleteInsuranceCompanyCenter($id)
     {
-        $icc = InsuranceCompaniesCenter::findOrFail($id);
+        $icc = CenterInsuranceCompany::findOrFail($id);
         try {
             $icc->delete();
         } catch (\Throwable $e) {
@@ -457,7 +459,7 @@ class CenterController extends Controller
     public function addSpecialTestCenter(Request $request, $id)
     {
 
-        $stc = new SpecialTestsCenter();
+        $stc = new CenterSpecialTest();
         $special_test_id = $request->special_test_id;
         $stc->center_id = $id;
         $stc->special_test_id = $special_test_id;
@@ -482,7 +484,7 @@ class CenterController extends Controller
     public function updateSpecialTestCenter(Request $request, $id)
     {
 
-        $stc = SpecialTestsCenter::findOrFail($id);
+        $stc = CenterSpecialTest::findOrFail($id);
         $stc->center_id =  $request->center_id;
         $stc->special_test_id = $request->special_test_id;;
 
@@ -503,7 +505,7 @@ class CenterController extends Controller
      */
     public function deleteSpecialTestCenter($id)
     {
-        $stc = SpecialTestsCenter::findOrFail($id);
+        $stc = CenterSpecialTest::findOrFail($id);
         try {
             $stc->delete();
         } catch (\Throwable $e) {
