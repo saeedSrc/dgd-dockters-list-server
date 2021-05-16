@@ -10,6 +10,7 @@ use App\Http\Controllers\SpecialTestController;
 use App\Http\Controllers\InsuranceCompanyController;
 use App\Http\Controllers\CollegeController;
 use App\Http\Controllers\SpecialtyController;
+use App\Http\Controllers\DoctorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -224,5 +225,33 @@ Route::delete('/speciality/{id}', [SpecialtyController::class, 'destroy']);
 
 
 
+//////////////// doctor speciality //////////////////////////////////////////////////
+// request:  specialty_id
+Route::post('/doctor_specialty/{doctor_id}', [DoctorController::class, 'addSpecialityDoctor']);
+
+// request: doctor_id, specialty_id , method = put
+Route::put('/doctor_specialty/{id}', [DoctorController::class, 'updateSpecialityDoctor']);
+
+// request:  method = delete
+Route::delete('/doctor_specialty/{id}', [DoctorController::class, 'deleteSpecialityDoctor']);
+/////////////////////////center special doctors /////////////////////////////////////////////////////
+
+
+
+
+
+// request:
+Route::get('/doctors', [DoctorController::class, 'index']);
+
+// request: name, site, technical_manager_name, country_id,province_id, city_id,
+// area, area_name, discount, satisfaction, hours_of_work_id, governmental_type, type_id, latitude, longitude, logo
+Route::post('/doctor', [DoctorController::class, 'store']);
+
+// request: name, site, technical_manager_name, country_id,province_id, city_id,
+// area, area_name, discount, satisfaction, hours_of_work_id, governmental_type, type_id, latitude, longitude, logo, method = put
+Route::put('/doctor/{id}', [DoctorController::class, 'update']);
+
+// request: method = delete
+Route::delete('/doctor/{id}', [DoctorController::class, 'destroy']);
 //////////////////////doctors /////////////////////////////////////////////////////////
 

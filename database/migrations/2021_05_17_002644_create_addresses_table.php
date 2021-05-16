@@ -17,8 +17,10 @@ class CreateAddressesTable extends Migration
             $table->id();
             $table->text('address');
             $table->string('neighbourhood');
-            $table->unsignedBigInteger('center_id');
+            $table->unsignedBigInteger('center_id')->nullable(true);
+            $table->unsignedBigInteger('doctor_id')->nullable(true);
             $table->foreign('center_id')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('doctor_id')->references('id')->on('doctors')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -17,8 +17,12 @@ class CreatePhonesTable extends Migration
             $table->id();
             $table->string('phone');
 
-            $table->unsignedBigInteger('center_id');
+            $table->unsignedBigInteger('center_id')->nullable(true);
+            $table->unsignedBigInteger('doctor_id')->nullable(true);
             $table->timestamps();
+
+            $table->foreign('center_id')->references('id')->on('centers')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('doctor_id')->references('id')->on('doctors')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
