@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCentersTable extends Migration
+class CreateDoctorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,26 +13,23 @@ class CreateCentersTable extends Migration
      */
     public function up()
     {
-        Schema::create('centers', function (Blueprint $table) {
+        Schema::create('doctors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('site');
-            $table->string('technical_manager_name');
+            $table->string('system_medicine_number');
+            $table->string('work_experience');
+            $table->boolean('has_office');
             $table->unsignedBigInteger('country_id');
             $table->unsignedBigInteger('province_id');
             $table->unsignedBigInteger('city_id');
+            $table->unsignedBigInteger('college_id');
             $table->integer('area');
             $table->string('area_name');
-            $table->integer('discount');
             $table->integer('satisfaction');
-            $table->unsignedBigInteger('hours_of_work_id');
-            $table->enum('governmental_type', ['governmental', 'private']);
-            $table->unsignedBigInteger('type_id');
             $table->decimal('latitude');
             $table->decimal('longitude');
-            $table->string('logo');
             $table->timestamps();
-
         });
     }
 
@@ -43,6 +40,6 @@ class CreateCentersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('centers');
+        Schema::dropIfExists('doctors');
     }
 }
