@@ -35,6 +35,6 @@ class Center extends Model
 
     public function insuranceCompanies()
     {
-        return $this->belongsToMany(CenterInsuranceCompany::class);
+        return $this->belongsToMany(InsuranceCompany::class);
     }
 }

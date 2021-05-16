@@ -25,7 +25,7 @@ class CenterController extends Controller
     public function index()
     {
         $centers = Center::with('images', 'phones', 'addresses', 'specialDoctors', 'specialTests', 'insuranceCompanies')->get();
-        return $centers;
+        return $this->successResponse($centers);
 
     }
 
@@ -331,7 +331,7 @@ class CenterController extends Controller
             if($request->hasFile('image')) {
                 if($request->file('image')->isValid()) {
                     $path = time(). '-' . $request->file('image')->getClientOriginalName();
-                    $request->file('image')->move(storage_path(config('constants.center_img_path')), $path);
+                    $request->file('image')->move(public_path(config('constants.center_img_path')), $path);
                     $image->path = $path;
                     $image->center_id = $id;
                 }
