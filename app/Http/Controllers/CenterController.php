@@ -180,7 +180,7 @@ class CenterController extends Controller
         }
 
         if ($type == 'doctors') {
-            // todo later
+            $phone->doctor_id = $id;
         }
 
         try {
@@ -250,7 +250,7 @@ class CenterController extends Controller
         }
 
         if ($type == 'doctors') {
-            // todo later
+            $address->doctor_id = $id;
         }
 
         try {
@@ -389,6 +389,18 @@ class CenterController extends Controller
         }
 
 
+        if ($type == 'doctors') {
+            if($request->hasFile('image')) {
+                if($request->file('image')->isValid()) {
+                    $path = time(). '-' . $request->file('image')->getClientOriginalName();
+                    $request->file('image')->move(public_path(config('constants.center_img_path')), $path);
+                    $image->path = $path;
+                    $image->doctor_id = $id;
+                }
+            }
+        }
+
+
         try {
             $image->save();
         } catch (\Throwable $e) {
@@ -428,16 +440,8 @@ class CenterController extends Controller
 
         $icc = new CenterInsuranceCompany();
         $insurance_company_id = $request->insurance_company_id;
-        $type = $request->type;
-
-        if ($type == 'centers') {
-            $icc->center_id = $id;
-            $icc->insurance_company_id = $insurance_company_id;
-        }
-
-        if ($type == 'doctors') {
-            // todo later
-        }
+        $icc->center_id = $id;
+        $icc->insurance_company_id = $insurance_company_id;
 
         try {
             $icc->save();
@@ -460,17 +464,9 @@ class CenterController extends Controller
 
         $icc = CenterInsuranceCompany::findOrFail($id);
         $insurance_company_id = $request->insurance_company_id;
-        $type = $request->type;
-
-        if ($type == 'centers') {
             $center_id = $request->center_id;
             $icc->center_id = $center_id;
             $icc->insurance_company_id = $insurance_company_id;
-        }
-
-        if ($type == 'doctors') {
-            // todo later
-        }
 
         try {
             $icc->save();

@@ -117,7 +117,7 @@ Route::put('/center/{id}', [CenterController::class, 'update']);
 Route::delete('/center/{id}', [CenterController::class, 'destroy']);
 
 //////////////// center phone //////////////////////////////////////////////////
-// request: type: centers or doctors, phone
+// request: type: centers or doctors, phone  ** center_id could be doctor_id
 Route::post('/phone/{center_id}', [CenterController::class, 'addPhone']);
 
 // request: phone(string) , method = put
@@ -153,7 +153,7 @@ Route::delete('/special_doctor/{id}', [CenterController::class, 'deleteSpecialDo
 
 /////////////////////////// center images //////////////////////////////////////
 
-// request: type: centers or doctors , image(file)
+// request: type: centers or doctors , image(file)  ** center_id could be doctor_id
 Route::post('/image/{center_id}', [CenterController::class, 'addImage']);
 
 // request:  method = delete
@@ -163,10 +163,10 @@ Route::delete('/image/{id}', [CenterController::class, 'deleteImage']);
 
 
 //////////////// center insurance_companies //////////////////////////////////////////////////
-// request: type : centers or doctors, insurance_company_id
+// request: insurance_company_id
 Route::post('/insurance_company_center/{center_id}', [CenterController::class, 'addInsuranceCompanyCenter']);
 
-// request: type: centers or doctors, center_id, insurance_company_id , method = put
+// request: center_id, insurance_company_id , method = put
 Route::put('/insurance_company_center/{id}', [CenterController::class, 'updateInsuranceCompanyCenter']);
 
 // request:  method = delete
@@ -211,7 +211,7 @@ Route::delete('/college/{id}', [CollegeController::class, 'destroy']);
 
 //////////doctor speciality ///////////////////////////////
 // request:
-Route::get('/specialities', [SpecialtyController::class, 'index']);
+Route::get('/specialties', [SpecialtyController::class, 'index']);
 
 // request: name,  name_en
 Route::post('/speciality', [SpecialtyController::class, 'store']);
@@ -243,8 +243,8 @@ Route::delete('/doctor_specialty/{id}', [DoctorController::class, 'deleteSpecial
 // request:
 Route::get('/doctors', [DoctorController::class, 'index']);
 
-// request: name, site, technical_manager_name, country_id,province_id, city_id,
-// area, area_name, discount, satisfaction, hours_of_work_id, governmental_type, type_id, latitude, longitude, logo
+// request: name, site, system_medicine_number, work_experience,has_office, country_id, province_id, college_id, city_id,
+// area, area_name, satisfaction, hours_of_work_id, latitude, longitude, logo
 Route::post('/doctor', [DoctorController::class, 'store']);
 
 // request: name, site, technical_manager_name, country_id,province_id, city_id,

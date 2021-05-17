@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Doctor;
-use App\Models\SpecialDoctor;
+use App\Models\DoctorSpecialty;
 use Illuminate\Http\Request;
+use PhpParser\Comment\Doc;
 
 class DoctorController extends Controller
 {
@@ -38,7 +39,28 @@ class DoctorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $doctor = new Doctor();
+        $doctor->name = $request->name;
+        $doctor->site = $request->site;
+        $doctor->system_medicine_number = $request->system_medicine_number;
+        $doctor->country_id = $request->country_id;
+        $doctor->province_id = $request->province_id;
+        $doctor->city_id = $request->city_id;
+        $doctor->area = $request->area;
+        $doctor->area_name = $request->area_name;
+        $doctor->work_experience = $request->work_experience;
+        $doctor->satisfaction = $request->satisfaction;
+        $doctor->has_office = $request->has_office;
+        $doctor->latitude = $request->latitude;
+        $doctor->longitude = $request->longitude;
+        $doctor->college_id = $request->college_id;
+        try {
+            $doctor->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($doctor);
     }
 
     /**
@@ -70,9 +92,29 @@ class DoctorController extends Controller
      * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Doctor $doctor)
+    public function update(Request $request, $id)
     {
-        //
+        $doctor  = Doctor::findOrFail($id);
+        $doctor->name = $request->name;
+        $doctor->site = $request->site;
+        $doctor->system_medicine_number = $request->system_medicine_number;
+        $doctor->country_id = $request->country_id;
+        $doctor->province_id = $request->province_id;
+        $doctor->city_id = $request->city_id;
+        $doctor->area = $request->area;
+        $doctor->area_name = $request->area_name;
+        $doctor->work_experience = $request->work_experience;
+        $doctor->satisfaction = $request->satisfaction;
+        $doctor->has_office = $request->has_office;
+        $doctor->latitude = $request->latitude;
+        $doctor->longitude = $request->longitude;
+        try {
+            $doctor->save();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($doctor);
     }
 
     /**
@@ -81,9 +123,16 @@ class DoctorController extends Controller
      * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Doctor $doctor)
+    public function destroy($id)
     {
-        //
+        $doctor = Doctor::findOrFail($id);
+        try {
+            $doctor->delete();
+        } catch (\Throwable $e) {
+            return $this->errorResponse($e);
+        }
+
+        return $this->successResponse($doctor);
     }
 
 
@@ -96,7 +145,7 @@ class DoctorController extends Controller
     public function addSpecialityDoctor(Request $request, $id)
     {
 
-        $sd = new SpecialDoctor();
+        $sd = new DoctorSpecialty();
         $sd->doctor_id = $id;
         $sd->specialty_id = $request->specialty_id;
 
@@ -119,7 +168,7 @@ class DoctorController extends Controller
      */
     public function updateSpecialityDoctor(Request $request, $id)
     {
-        $sd = SpecialDoctor::findOrFail($id);
+        $sd = DoctorSpecialty::findOrFail($id);
         $sd->specialty_id = $request->specialty_id;
         $sd->doctor_id = $request->doctor_id;
 
@@ -141,7 +190,7 @@ class DoctorController extends Controller
      */
     public function deleteSpecialityDoctor($id)
     {
-        $sd = SpecialDoctor::findOrFail($id);
+        $sd = DoctorSpecialty::findOrFail($id);
         try {
             $sd->delete();
         } catch (\Throwable $e) {
