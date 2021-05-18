@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SpecialTestRequiredName;
 use App\Models\SpecialTest;
 use Illuminate\Http\Request;
 
@@ -34,7 +35,7 @@ class SpecialTestController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(SpecialTestRequiredName $request)
     {
         $st = new SpecialTest();
         $st->name = $request->name;
@@ -77,7 +78,7 @@ class SpecialTestController extends Controller
      * @param  \App\Models\SpecialTest  $specialTest
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(SpecialTestRequiredName $request, $id)
     {
 
         $st = SpecialTest::findOrFail($id);

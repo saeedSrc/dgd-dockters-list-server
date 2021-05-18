@@ -18,8 +18,12 @@ class LocalInformation extends Controller
     public function getCities(Request $request)
     {
         $provinceId = $request->province;
+        if($provinceId == null) {
+            $provinceId = 1;
+        }
         try {
             $province = Province::findOrFail($provinceId);
+
             $cities =  $province->cities;
         } catch (\Throwable $e) {
             return $this->errorResponse($e);

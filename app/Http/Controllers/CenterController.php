@@ -2,6 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AddressRequest;
+use App\Http\Requests\CenterRequest;
+use App\Http\Requests\ImageRequest;
+use App\Http\Requests\InsuranceCompanyCenterRequest;
+use App\Http\Requests\InsuranceCompanyRequest;
+use App\Http\Requests\PhoneRequest;
 use App\Models\Address;
 use App\Models\Center;
 use App\Models\Image;
@@ -60,7 +66,7 @@ class CenterController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CenterRequest $request)
     {
         $center = new Center();
         $center->name = $request->name;
@@ -117,7 +123,7 @@ class CenterController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CenterRequest $request, $id)
     {
         $center  = Center::findOrFail($id);
         $center->name = $request->name;
@@ -170,11 +176,13 @@ class CenterController extends Controller
      * @param  string $phone
      * @return \Illuminate\Http\Response
      */
-    public function addPhone(Request $request, $id)
+    public function addPhone(PhoneRequest $request, $id)
     {
         $type = $request->type;
         $phone = new Phone();
         $phone->phone = $request->phone;
+
+
         if ($type == 'centers') {
             $phone->center_id = $id;
         }
@@ -199,7 +207,7 @@ class CenterController extends Controller
      * @param  string $phone
      * @return \Illuminate\Http\Response
      */
-    public function updatePhone(Request $request, $id)
+    public function updatePhone(PhoneRequest $request, $id)
     {
         $phone = Phone::findOrFail($id);
         $phone->phone = $request->phone;
@@ -239,7 +247,7 @@ class CenterController extends Controller
      * @param  string $address
      * @return \Illuminate\Http\Response
      */
-    public function addAddress(Request $request, $id)
+    public function addAddress(AddressRequest $request, $id)
     {
         $type = $request->type;
         $address = new Address();
@@ -269,7 +277,7 @@ class CenterController extends Controller
      * @param  string $address
      * @return \Illuminate\Http\Response
      */
-    public function updateAddress(Request $request, $id)
+    public function updateAddress(AddressRequest $request, $id)
     {
         $address = Address::findOrFail($id);
         $address->address = $request->address;
@@ -372,7 +380,7 @@ class CenterController extends Controller
      * @param  int $image
      * @return \Illuminate\Http\Response
      */
-    public function addImage(Request $request, $id)
+    public function addImage(ImageRequest $request, $id)
     {
         $image = new Image();
         $type = $request->type;
@@ -435,7 +443,7 @@ class CenterController extends Controller
      * @param  string $name
      * @return \Illuminate\Http\Response
      */
-    public function addInsuranceCompanyCenter(Request $request, $id)
+    public function addInsuranceCompanyCenter(InsuranceCompanyCenterRequest $request, $id)
     {
 
         $icc = new CenterInsuranceCompany();
@@ -459,7 +467,7 @@ class CenterController extends Controller
      * @param  string $name
      * @return \Illuminate\Http\Response
      */
-    public function updateInsuranceCompanyCenter(Request $request, $id)
+    public function updateInsuranceCompanyCenter(InsuranceCompanyCenterRequest $request, $id)
     {
 
         $icc = CenterInsuranceCompany::findOrFail($id);

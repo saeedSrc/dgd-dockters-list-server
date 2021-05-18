@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RequiredName;
 use App\Models\CenterType;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,7 @@ class CenterTypeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RequiredName $request)
     {
         $centerType = new CenterType();
         $centerType->name = $request->name;
@@ -79,7 +80,7 @@ class CenterTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RequiredName $request, $id)
     {
      $ct = CenterType::findOrFail($id);
         $ct->name = $request->name;

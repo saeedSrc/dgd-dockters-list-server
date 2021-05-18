@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\InsuranceCompanyRequest;
 use App\Models\InsuranceCompany;
 use Illuminate\Http\Request;
 
@@ -34,7 +35,7 @@ class InsuranceCompanyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(InsuranceCompanyRequest $request)
     {
         $ic = new InsuranceCompany();
         $ic->name = $request->name;
@@ -78,7 +79,7 @@ class InsuranceCompanyController extends Controller
      * @param  \App\Models\InsuranceCompany  $insuranceCompany
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(InsuranceCompanyRequest $request, $id)
     {
         $ic = InsuranceCompany::findOrFail($id);
         $ic->name = $request->name;
