@@ -8,6 +8,7 @@ use App\Http\Requests\ImageRequest;
 use App\Http\Requests\InsuranceCompanyCenterRequest;
 use App\Http\Requests\InsuranceCompanyRequest;
 use App\Http\Requests\PhoneRequest;
+use App\Http\Requests\SpecialTestCenterRequest;
 use App\Models\Address;
 use App\Models\Center;
 use App\Models\Image;
@@ -510,7 +511,7 @@ class CenterController extends Controller
      * @param  int $special_test_id
      * @return \Illuminate\Http\Response
      */
-    public function addSpecialTestCenter(Request $request, $id)
+    public function addSpecialTestCenter(SpecialTestCenterRequest $request, $id)
     {
 
         $stc = new CenterSpecialTest();
@@ -535,7 +536,7 @@ class CenterController extends Controller
      * @param  string $special_test_id
      * @return \Illuminate\Http\Response
      */
-    public function updateSpecialTestCenter(Request $request, $id)
+    public function updateSpecialTestCenter(SpecialTestCenterRequest $request, $id)
     {
 
         $stc = CenterSpecialTest::findOrFail($id);

@@ -202,8 +202,6 @@ Route::delete('/special_test_center/{id}', [CenterController::class, 'deleteSpec
 
 
 
-
-
 //////////////////////doctors /////////////////////////////////////////////////////////
 
 
@@ -222,18 +220,20 @@ Route::delete('/college/{id}', [CollegeController::class, 'destroy']);
 ////////// doctor college ///////////////////////////////
 
 
+
+
 //////////doctor speciality ///////////////////////////////
 // request:
 Route::get('/specialties', [SpecialtyController::class, 'index']);
 
 // request: name,  name_en
-Route::post('/speciality', [SpecialtyController::class, 'store']);
+Route::post('/specialty', [SpecialtyController::class, 'store']);
 
 // request: name, name_en, method = put
-Route::put('/speciality/{id}', [SpecialtyController::class, 'update']);
+Route::put('/specialty/{id}', [SpecialtyController::class, 'update']);
 
 // request: _method = delete
-Route::delete('/speciality/{id}', [SpecialtyController::class, 'destroy']);
+Route::delete('/specialty/{id}', [SpecialtyController::class, 'destroy']);
 ////////// doctor speciality ///////////////////////////////
 
 
@@ -248,9 +248,6 @@ Route::put('/doctor_specialty/{id}', [DoctorController::class, 'updateSpeciality
 // request:  method = delete
 Route::delete('/doctor_specialty/{id}', [DoctorController::class, 'deleteSpecialityDoctor']);
 /////////////////////////center special doctors /////////////////////////////////////////////////////
-
-
-
 
 
 // request:

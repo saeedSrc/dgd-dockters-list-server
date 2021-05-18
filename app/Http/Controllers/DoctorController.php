@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DoctorRequest;
+use App\Http\Requests\DoctorSpecialtyRequest;
 use App\Models\Doctor;
 use App\Models\DoctorSpecialty;
 use Illuminate\Http\Request;
@@ -36,7 +38,7 @@ class DoctorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(DoctorRequest $request)
     {
         $doctor = new Doctor();
         $doctor->name = $request->name;
@@ -91,7 +93,7 @@ class DoctorController extends Controller
      * @param  \App\Models\Doctor  $doctor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(DoctorRequest $request, $id)
     {
         $doctor  = Doctor::findOrFail($id);
         $doctor->name = $request->name;
@@ -141,7 +143,7 @@ class DoctorController extends Controller
      * @param  int $specialty_id
      * @return \Illuminate\Http\Response
      */
-    public function addSpecialityDoctor(Request $request, $id)
+    public function addSpecialityDoctor(DoctorSpecialtyRequest $request, $id)
     {
 
         $sd = new DoctorSpecialty();
@@ -165,7 +167,7 @@ class DoctorController extends Controller
      * @param  string $specialty_id
      * @return \Illuminate\Http\Response
      */
-    public function updateSpecialityDoctor(Request $request, $id)
+    public function updateSpecialityDoctor(DoctorSpecialtyRequest $request, $id)
     {
         $sd = DoctorSpecialty::findOrFail($id);
         $sd->specialty_id = $request->specialty_id;
