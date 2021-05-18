@@ -4,10 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Doctor extends Model
 {
     use HasFactory;
+
+//    public function getCreatedAtAttribute($date)
+//    {
+//        return Carbon::createFromFormat('Y-m-d H:i:s', $date, 'Asia/Tehran')->format('y-m-d H:i:s');
+//    }
+//
+//    public function getUpdatedAtAttribute($date)
+//    {
+////         return Carbon::createFromFormat(12, 0, 0, 'Europe/London');
+//    }
+
 
     public function images()
     {
