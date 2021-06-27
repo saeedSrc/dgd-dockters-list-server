@@ -40,4 +40,11 @@ class Doctor extends Model
     {
         return $this->belongsToMany(Specialty::class);
     }
+
+    public function colleges()
+    {
+        return $this->hasOne(College::class);
+    }
+
+
 }

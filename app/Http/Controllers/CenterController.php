@@ -73,8 +73,11 @@ class CenterController extends Controller
         $center->site = $request->site;
         $center->technical_manager_name = $request->technical_manager_name;
         $center->country_id = $request->country_id;
+        $center->country_name = $request->country_name;
         $center->province_id = $request->province_id;
+        $center->province_name = $request->province_name;
         $center->city_id = $request->city_id;
+        $center->city_name = $request->city_name;
         $center->area = $request->area;
         $center->area_name = $request->area_name;
         $center->discount = $request->discount;
@@ -130,8 +133,11 @@ class CenterController extends Controller
         $center->site = $request->site;
         $center->technical_manager_name = $request->technical_manager_name;
         $center->country_id = $request->country_id;
+        $center->country = $request->country;
         $center->province_id = $request->province_id;
+        $center->province = $request->province;
         $center->city_id = $request->city_id;
+        $center->city = $request->city;
         $center->area = $request->area;
         $center->area_name = $request->area_name;
         $center->discount = $request->discount;
