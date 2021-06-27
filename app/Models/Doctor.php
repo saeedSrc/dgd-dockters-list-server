@@ -43,7 +43,7 @@ class Doctor extends Model
 
     public function colleges()
     {
-        return $this->belongsTo(College::class);
+        return $this->belongsTo(College::class, 'college_id');
     }
 
 
