@@ -31,7 +31,7 @@ class CenterController extends Controller
      */
     public function index()
     {
-        $centers = Center::with('images', 'phones', 'addresses', 'specialDoctors', 'specialTests', 'insuranceCompanies')->get();
+        $centers = Center::with('images', 'phones', 'addresses', 'specialDoctors', 'specialTests', 'insuranceCompanies', 'country', 'province', 'city')->get();
 
         return $this->successResponse($centers);
 

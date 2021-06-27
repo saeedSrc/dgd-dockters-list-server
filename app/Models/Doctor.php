@@ -46,5 +46,20 @@ class Doctor extends Model
         return $this->belongsTo(College::class, 'college_id');
     }
 
+    public function country()
+    {
+        return $this->belongsTo(Country::class, 'country_id');
+    }
+
+    public function province()
+    {
+        return $this->belongsTo(Province::class, 'province_id');
+    }
+
+    public function city()
+    {
+        return $this->belongsTo(City::class, 'city_id');
+    }
+
 
 }
