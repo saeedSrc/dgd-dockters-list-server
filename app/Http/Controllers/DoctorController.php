@@ -45,11 +45,8 @@ class DoctorController extends Controller
         $doctor->site = $request->site;
         $doctor->system_medicine_number = $request->system_medicine_number;
         $doctor->country_id = $request->country_id;
-        $doctor->country = $request->country;
         $doctor->province_id = $request->province_id;
-        $doctor->province = $request->province;
         $doctor->city_id = $request->city_id;
-        $doctor->city = $request->city;
         $doctor->area = $request->area;
         $doctor->area_name = $request->area_name;
         $doctor->work_experience = $request->work_experience;
@@ -103,11 +100,8 @@ class DoctorController extends Controller
         $doctor->site = $request->site;
         $doctor->system_medicine_number = $request->system_medicine_number;
         $doctor->country_id = $request->country_id;
-        $doctor->country = $request->country;
         $doctor->province_id = $request->province_id;
-        $doctor->province = $request->province;
         $doctor->city_id = $request->city_id;
-        $doctor->city = $request->city;
         $doctor->area = $request->area;
         $doctor->area_name = $request->area_name;
         $doctor->work_experience = $request->work_experience;

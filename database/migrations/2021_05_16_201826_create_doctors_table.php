@@ -21,11 +21,8 @@ class CreateDoctorsTable extends Migration
             $table->string('work_experience');
             $table->boolean('has_office');
             $table->unsignedBigInteger('country_id');
-            $table->string('country');
             $table->unsignedBigInteger('province_id');
-            $table->string('province');
             $table->unsignedBigInteger('city_id');
-            $table->string('city');
             $table->unsignedBigInteger('college_id');
             $table->integer('area');
             $table->string('area_name');

@@ -19,11 +19,8 @@ class CreateCentersTable extends Migration
             $table->string('site');
             $table->string('technical_manager_name');
             $table->unsignedBigInteger('country_id');
-            $table->string('country');
             $table->unsignedBigInteger('province_id');
-            $table->string('province');
             $table->unsignedBigInteger('city_id');
-            $table->string('city');
             $table->integer('area');
             $table->string('area_name');
             $table->integer('discount');
