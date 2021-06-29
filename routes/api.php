@@ -168,7 +168,7 @@ Route::post('/special_doctor/{center_id}', [CenterController::class, 'addSpecial
 // request: name(string) , method = put
 Route::put('/special_doctor/{id}', [CenterController::class, 'updateSpecialDoctor']);
 
-// request:  method = delete
+// request:  method = deletimagee
 Route::delete('/special_doctor/{id}', [CenterController::class, 'deleteSpecialDoctor']);
 /////////////////////////center special doctors /////////////////////////////////////////////////////
 
