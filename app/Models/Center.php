@@ -30,12 +30,12 @@ class Center extends Model
 
     public function specialTests()
     {
-        return $this->belongsToMany(SpecialTest::class);
+        return $this->belongsToMany(SpecialTest::class, 'center_special_test')->withPivot('id');
     }
 
     public function insuranceCompanies()
     {
-        return $this->belongsToMany(InsuranceCompany::class);
+        return $this->belongsToMany(InsuranceCompany::class, 'center_insurance_company')->withPivot('id');
     }
 
 

@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class SpecialTest extends Model
 {
+    protected $table = 'special_tests';
     use HasFactory;
 }

@@ -15,9 +15,9 @@ class LocalInformation extends Controller
        return $this->successResponse($provinces);
     }
 
-    public function getCities(Request $request)
+    public function getCities($provinceId)
     {
-        $provinceId = $request->province;
+
         if($provinceId == null) {
             $provinceId = 1;
         }

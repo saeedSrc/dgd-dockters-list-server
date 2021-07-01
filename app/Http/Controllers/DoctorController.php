@@ -18,7 +18,7 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $doctors = Doctor::with('images', 'phones', 'addresses', 'specialties', 'colleges', 'country', 'province', 'city')->get();
+        $doctors = Doctor::with('images', 'phones', 'addresses', 'specialties', 'college', 'country', 'province', 'city')->get();
         return $this->successResponse($doctors);
     }
 

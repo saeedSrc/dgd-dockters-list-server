@@ -75,15 +75,15 @@ class CenterController extends Controller
         $center->country_id = $request->country_id;
         $center->province_id = $request->province_id;
         $center->city_id = $request->city_id;
-        $center->area = $request->area;
+        $center->area = intval($request->area);
         $center->area_name = $request->area_name;
-        $center->discount = $request->discount;
-        $center->satisfaction = $request->satisfaction;
+        $center->discount = intval($request->discount);
+        $center->satisfaction = intval($request->satisfaction);
         $center->hours_of_work_id = $request->hours_of_work_id;
         $center->governmental_type = $request->governmental_type;
         $center->type_id = $request->type_id;
-        $center->latitude = $request->latitude;
-        $center->longitude = $request->longitude;
+        $center->latitude = floatval($request->latitude);
+        $center->longitude = floatval($request->longitude);
         $center->logo = $request->logo;
         try {
             $center->save();
@@ -132,15 +132,15 @@ class CenterController extends Controller
         $center->country_id = $request->country_id;
         $center->province_id = $request->province_id;
         $center->city_id = $request->city_id;
-        $center->area = $request->area;
+        $center->area = intval($request->area);
         $center->area_name = $request->area_name;
-        $center->discount = $request->discount;
-        $center->satisfaction = $request->satisfaction;
+        $center->discount = intval($request->discount);
+        $center->satisfaction = intval($request->satisfaction);
         $center->hours_of_work_id = $request->hours_of_work_id;
         $center->governmental_type = $request->governmental_type;
         $center->type_id = $request->type_id;
-        $center->latitude = $request->latitude;
-        $center->longitude = $request->longitude;
+        $center->latitude =  floatval($request->latitude);
+        $center->longitude = floatval($request->longitude);
         $center->logo = $request->logo;
         try {
             $center->save();

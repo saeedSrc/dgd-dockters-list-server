@@ -32,7 +32,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/provinces', [LocalInformation::class, 'getProvinces']);
 
 // url parameters: province(int)
-Route::get('/cities', [LocalInformation::class, 'getCities']);
+Route::get('/cities/{province_id}', [LocalInformation::class, 'getCities']);
 
 ////////////////////center_types//////////////////////////////////
 // request:
