@@ -43,17 +43,17 @@ class DoctorController extends Controller
         $doctor = new Doctor();
         $doctor->name = $request->name;
         $doctor->site = $request->site;
-        $doctor->system_medicine_number = $request->system_medicine_number;
+        $doctor->system_medicine_number = intval($request->system_medicine_number);
         $doctor->country_id = $request->country_id;
         $doctor->province_id = $request->province_id;
         $doctor->city_id = $request->city_id;
-        $doctor->area = $request->area;
+        $doctor->area = intval($request->area);
         $doctor->area_name = $request->area_name;
-        $doctor->work_experience = $request->work_experience;
-        $doctor->satisfaction = $request->satisfaction;
+        $doctor->work_experience = intval($request->work_experience);
+        $doctor->satisfaction = intval($request->satisfaction);
         $doctor->has_office = $request->has_office;
-        $doctor->latitude = $request->latitude;
-        $doctor->longitude = $request->longitude;
+        $doctor->latitude = floatval($request->latitude);
+        $doctor->longitude = floatval($request->longitude);
         $doctor->college_id = $request->college_id;
         try {
             $doctor->save();
@@ -98,17 +98,18 @@ class DoctorController extends Controller
         $doctor  = Doctor::findOrFail($id);
         $doctor->name = $request->name;
         $doctor->site = $request->site;
-        $doctor->system_medicine_number = $request->system_medicine_number;
+        $doctor->system_medicine_number = intval($request->system_medicine_number);
         $doctor->country_id = $request->country_id;
         $doctor->province_id = $request->province_id;
         $doctor->city_id = $request->city_id;
-        $doctor->area = $request->area;
+        $doctor->area = intval($request->area);
         $doctor->area_name = $request->area_name;
-        $doctor->work_experience = $request->work_experience;
-        $doctor->satisfaction = $request->satisfaction;
+        $doctor->work_experience = intval($request->work_experience);
+        $doctor->satisfaction = intval($request->satisfaction);
         $doctor->has_office = $request->has_office;
-        $doctor->latitude = $request->latitude;
-        $doctor->longitude = $request->longitude;
+        $doctor->latitude = floatval($request->latitude);
+        $doctor->longitude = floatval($request->longitude);
+        $doctor->college_id = $request->college_id;
         try {
             $doctor->save();
         } catch (\Throwable $e) {
