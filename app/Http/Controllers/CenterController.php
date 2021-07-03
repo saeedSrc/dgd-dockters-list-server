@@ -8,6 +8,7 @@ use App\Http\Requests\ImageRequest;
 use App\Http\Requests\InsuranceCompanyCenterRequest;
 use App\Http\Requests\InsuranceCompanyRequest;
 use App\Http\Requests\PhoneRequest;
+use App\Http\Requests\SpecialDoctorRequest;
 use App\Http\Requests\SpecialTestCenterRequest;
 use App\Models\Address;
 use App\Models\Center;
@@ -318,7 +319,7 @@ class CenterController extends Controller
      * @param  string $name
      * @return \Illuminate\Http\Response
      */
-    public function addSpecialDoctor(Request $request, $id)
+    public function addSpecialDoctor(SpecialDoctorRequest $request, $id)
     {
 
         $sp = new SpecialDoctor();
