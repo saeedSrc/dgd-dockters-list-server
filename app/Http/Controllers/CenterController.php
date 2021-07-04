@@ -21,6 +21,7 @@ use App\Models\SpecialDoctor;
 use App\Models\CenterSpecialTest;
 use Faker\Provider\PhoneNumber;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
 
 
 class CenterController extends Controller
@@ -85,7 +86,14 @@ class CenterController extends Controller
         $center->type_id = $request->type_id;
         $center->latitude = floatval($request->latitude);
         $center->longitude = floatval($request->longitude);
-        $center->logo = $request->logo;
+        if($request->hasFile('logo')) {
+            if($request->file('logo')->isValid()) {
+                $path = time(). '-' . $request->file('logo')->getClientOriginalName();
+                $request->file('logo')->move(public_path(config('constants.center_logo_path')), $path);
+                $center->logo = $path;
+            }
+        }
+
         try {
             $center->save();
         } catch (\Throwable $e) {
@@ -142,7 +150,14 @@ class CenterController extends Controller
         $center->type_id = $request->type_id;
         $center->latitude =  floatval($request->latitude);
         $center->longitude = floatval($request->longitude);
-        $center->logo = $request->logo;
+        if($request->hasFile('logo')) {
+            if($request->file('logo')->isValid()) {
+                $path = time(). '-' . $request->file('logo')->getClientOriginalName();
+                $request->file('logo')->move(public_path(config('constants.center_logo_path')), $path);
+                $center->logo = $path;
+            }
+        }
+
         try {
             $center->save();
         } catch (\Throwable $e) {
@@ -402,7 +417,7 @@ class CenterController extends Controller
             if($request->hasFile('image')) {
                 if($request->file('image')->isValid()) {
                     $path = time(). '-' . $request->file('image')->getClientOriginalName();
-                    $request->file('image')->move(public_path(config('constants.center_img_path')), $path);
+                    $request->file('image')->move(public_path(config('constants.doctor_img_path')), $path);
                     $image->path = $path;
                     $image->doctor_id = $id;
                 }
@@ -568,5 +583,26 @@ class CenterController extends Controller
         }
 
         return $this->successResponse($stc);
+    }
+
+    public function DownloadLogo($logo)
+    {
+        $filePath = public_path(config('constants.center_logo_path')) . $logo;
+        return Response::download($filePath);
+
+    }
+
+    public function DownloadCenterImage($img)
+    {
+        $filePath = public_path(config('constants.center_img_path')) . $img;
+        return Response::download($filePath);
+
+    }
+
+    public function DownloadDoctorImage($img)
+    {
+        $filePath = public_path(config('constants.doctor_img_path')) . $img;
+        return Response::download($filePath);
+
     }
 }

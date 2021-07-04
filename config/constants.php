@@ -8,5 +8,8 @@
 
 return [
     'center_img_path' => 'app/public/uploads/center_images/',
+    'center_logo_path' => 'app/public/uploads/center_logo/',
+    'doctor_img_path' => 'app/public/uploads/doctor_images/',
+
 ];
 

@@ -156,6 +156,16 @@ Route::post('/image/{center_id}', [CenterController::class, 'addImage']);
 // request:  method = delete
 Route::delete('/image/{id}', [CenterController::class, 'deleteImage']);
 
+
+// request:
+Route::get('/logo/{logo}', [CenterController::class, 'DownloadLogo']);
+Route::get('/center_img/{img}', [CenterController::class, 'DownloadCenterImage']);
+Route::get('/doctor_img/{img}', [CenterController::class, 'DownloadDoctorImage']);
+
+
+
+
+
 /////////////////////////// center images //////////////////////////////////////
 
 
