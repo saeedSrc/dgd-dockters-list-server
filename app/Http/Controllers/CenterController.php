@@ -12,6 +12,7 @@ use App\Http\Requests\SpecialDoctorRequest;
 use App\Http\Requests\SpecialTestCenterRequest;
 use App\Models\Address;
 use App\Models\Center;
+use App\Models\CenterDoctor;
 use App\Models\Image;
 use App\Models\CenterInsuranceCompany;
 use App\Models\InsuranceCompany;
@@ -33,7 +34,7 @@ class CenterController extends Controller
      */
     public function index()
     {
-        $centers = Center::with('images', 'phones', 'addresses', 'specialDoctors', 'specialTests', 'insuranceCompanies', 'country', 'province', 'city', 'centerType')->get();
+        $centers = Center::with('images', 'phones', 'addresses', 'specialTests', 'insuranceCompanies', 'doctors' ,  'country', 'province', 'city', 'centerType')->get();
 
         return $this->successResponse($centers);
 
@@ -46,7 +47,7 @@ class CenterController extends Controller
      */
     public function getCentersByType($type_id)
     {
-        $centers = Center::with('images', 'phones', 'addresses', 'specialDoctors', 'specialTests', 'insuranceCompanies')->where('type_id', $type_id)->get();
+        $centers = Center::with('images', 'phones', 'addresses', 'specialTests', 'insuranceCompanies', 'doctors')->where('type_id', $type_id)->get();
 
         return $this->successResponse($centers);
 
@@ -328,66 +329,46 @@ class CenterController extends Controller
     }
 
     /**
-     * Add special doctor to center.
+     * Add doctor to center.
      *
      * @param  int $center_id
      * @param  string $name
      * @return \Illuminate\Http\Response
      */
-    public function addSpecialDoctor(SpecialDoctorRequest $request, $id)
+    public function addDoctorCenter(Request $request, $id)
     {
 
-        $sp = new SpecialDoctor();
-        $sp->name = $request->name;
-        $sp->center_id = $id;
+        $cd = new CenterDoctor();
+        $doctor_id = $request->doctor_id;
+        $cd->center_id = $id;
+        $cd->doctor_id = $doctor_id;
 
         try {
-            $sp->save();
+            $cd->save();
         } catch (\Throwable $e) {
             return $this->errorResponse($e);
         }
 
-        return $this->successResponse($sp);
+        return $this->successResponse($cd);
     }
 
     /**
-     * Update center special doctor.
+     * Delete center doctor.
      *
      * @param  int $id
      * @param  string $name
      * @return \Illuminate\Http\Response
      */
-    public function updateSpecialDoctor(Request $request, $id)
+    public function deleteDoctorCenter($id)
     {
-        $sp = SpecialDoctor::findOrFail($id);
-        $sp->name = $request->name;
-
+        $cd = CenterDoctor::findOrFail($id);
         try {
-            $sp->save();
+            $cd->delete();
         } catch (\Throwable $e) {
             return $this->errorResponse($e);
         }
 
-        return $this->successResponse($sp);
-    }
-
-    /**
-     * Delete center special doctor.
-     *
-     * @param  int $id
-     * @param  string $name
-     * @return \Illuminate\Http\Response
-     */
-    public function deleteSpecialDoctor($id)
-    {
-        $sp = SpecialDoctor::findOrFail($id);
-        try {
-            $sp->delete();
-        } catch (\Throwable $e) {
-            return $this->errorResponse($e);
-        }
-
-        return $this->successResponse($sp);
+        return $this->successResponse($cd);
     }
 
     /**

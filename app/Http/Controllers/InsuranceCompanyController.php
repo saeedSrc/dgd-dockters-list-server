@@ -41,6 +41,7 @@ class InsuranceCompanyController extends Controller
         $ic->name = $request->name;
         $ic->name_en = $request->name_en;
         $ic->type = $request->type;
+        $ic->insurance_type = $request->insurance_type;
         try {
             $ic->save();
         } catch (\Throwable $e) {
@@ -85,6 +86,7 @@ class InsuranceCompanyController extends Controller
         $ic->name = $request->name;
         $ic->name_en = $request->name_en;
         $ic->type = $request->type;
+        $ic->insurance_type = $request->insurance_type;
         try {
             $ic->save();
         } catch (\Throwable $e) {

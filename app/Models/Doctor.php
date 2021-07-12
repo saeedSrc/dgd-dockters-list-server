@@ -41,6 +41,11 @@ class Doctor extends Model
         return $this->belongsToMany(Specialty::class);
     }
 
+    public function centers()
+    {
+        return $this->belongsToMany(Center::class, 'center_doctor')->withPivot('id');
+    }
+
     public function college()
     {
         return $this->belongsTo(College::class, 'college_id');

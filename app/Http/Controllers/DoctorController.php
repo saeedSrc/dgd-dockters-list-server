@@ -18,7 +18,7 @@ class DoctorController extends Controller
      */
     public function index()
     {
-        $doctors = Doctor::with('images', 'phones', 'addresses', 'specialties', 'college', 'country', 'province', 'city')->get();
+        $doctors = Doctor::with('images', 'phones', 'addresses', 'specialties', 'centers', 'college', 'country', 'province', 'city')->get();
         return $this->successResponse($doctors);
     }
 
@@ -51,6 +51,7 @@ class DoctorController extends Controller
         $doctor->area_name = $request->area_name;
         $doctor->work_experience = intval($request->work_experience);
         $doctor->satisfaction = intval($request->satisfaction);
+        $doctor->hours_of_work_id = intval($request->hours_of_work_id);
         $doctor->has_office = $request->has_office;
         $doctor->latitude = floatval($request->latitude);
         $doctor->longitude = floatval($request->longitude);
@@ -105,6 +106,7 @@ class DoctorController extends Controller
         $doctor->area = intval($request->area);
         $doctor->area_name = $request->area_name;
         $doctor->work_experience = intval($request->work_experience);
+        $doctor->hours_of_work_id = intval($request->hours_of_work_id);
         $doctor->satisfaction = intval($request->satisfaction);
         $doctor->has_office = $request->has_office;
         $doctor->latitude = floatval($request->latitude);

@@ -41,6 +41,7 @@ class SpecialtyController extends Controller
         $sp = new Specialty();
         $sp->name = $request->name;
         $sp->name_en = $request->name_en;
+        $sp->description = $request->description;
 
         try {
             $sp->save();
@@ -85,6 +86,7 @@ class SpecialtyController extends Controller
          $sp = Specialty::findOrFail($id);
         $sp->name = $request->name;
         $sp->name_en = $request->name_en;
+        $sp->description = $request->description;
         try {
             $sp->save();
         } catch (\Throwable $e) {

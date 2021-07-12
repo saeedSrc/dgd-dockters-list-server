@@ -23,10 +23,6 @@ class Center extends Model
         return $this->hasMany(Address::class, 'center_id');
     }
 
-    public function specialDoctors()
-    {
-        return $this->hasMany(SpecialDoctor::class, 'center_id');
-    }
 
     public function specialTests()
     {
@@ -36,6 +32,11 @@ class Center extends Model
     public function insuranceCompanies()
     {
         return $this->belongsToMany(InsuranceCompany::class, 'center_insurance_company')->withPivot('id');
+    }
+
+    public function doctors()
+    {
+        return $this->belongsToMany(Doctor::class, 'center_doctor')->withPivot('id');
     }
 
 
