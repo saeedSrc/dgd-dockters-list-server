@@ -10,6 +10,7 @@ use App\Http\Requests\InsuranceCompanyRequest;
 use App\Http\Requests\PhoneRequest;
 use App\Http\Requests\SpecialDoctorRequest;
 use App\Http\Requests\SpecialTestCenterRequest;
+use App\Http\Requests\UpdateRequest;
 use App\Models\Address;
 use App\Models\Center;
 use App\Models\CenterDoctor;
@@ -133,7 +134,7 @@ class CenterController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(CenterRequest $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         $center  = Center::findOrFail($id);
         $center->name = $request->name;

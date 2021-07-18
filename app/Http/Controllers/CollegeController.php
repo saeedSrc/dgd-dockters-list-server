@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CollegeRequest;
+use App\Http\Requests\UpdateRequest;
 use App\Models\College;
 use Illuminate\Http\Request;
 
@@ -80,7 +81,7 @@ class CollegeController extends Controller
      * @param  \App\Models\College  $college
      * @return \Illuminate\Http\Response
      */
-    public function update(CollegeRequest $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         $college = College::findOrFail($id);
         $college->name = $request->name;

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SpecialTestRequiredName;
+use App\Http\Requests\UpdateRequest;
 use App\Models\SpecialTest;
 use Illuminate\Http\Request;
 
@@ -78,7 +79,7 @@ class SpecialTestController extends Controller
      * @param  \App\Models\SpecialTest  $specialTest
      * @return \Illuminate\Http\Response
      */
-    public function update(SpecialTestRequiredName $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
 
         $st = SpecialTest::findOrFail($id);

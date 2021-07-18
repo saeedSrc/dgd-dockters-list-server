@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\InsuranceCompanyRequest;
+use App\Http\Requests\UpdateRequest;
 use App\Models\InsuranceCompany;
 use Illuminate\Http\Request;
 
@@ -80,7 +81,7 @@ class InsuranceCompanyController extends Controller
      * @param  \App\Models\InsuranceCompany  $insuranceCompany
      * @return \Illuminate\Http\Response
      */
-    public function update(InsuranceCompanyRequest $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
         $ic = InsuranceCompany::findOrFail($id);
         $ic->name = $request->name;

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SpecialtyRequest;
+use App\Http\Requests\UpdateRequest;
 use App\Models\Specialty;
 use Illuminate\Http\Request;
 
@@ -81,7 +82,7 @@ class SpecialtyController extends Controller
      * @param  \App\Models\Specialty  $specialty
      * @return \Illuminate\Http\Response
      */
-    public function update(SpecialtyRequest $request, $id)
+    public function update(UpdateRequest $request, $id)
     {
          $sp = Specialty::findOrFail($id);
         $sp->name = $request->name;
