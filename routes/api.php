@@ -11,6 +11,7 @@ use App\Http\Controllers\InsuranceCompanyController;
 use App\Http\Controllers\CollegeController;
 use App\Http\Controllers\SpecialtyController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +24,18 @@ use App\Http\Controllers\DoctorController;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+
+
+
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'auth'
+], function ($router) {
+    Route::post('login', [AuthController::class, 'login']);
+
 });
 
 
