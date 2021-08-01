@@ -25,6 +25,7 @@ class AuthController extends Controller
         }
 
         $token_validity =  24 * 60;
+
         $this->guard()->factory()->setTTL($token_validity);
 
         if(! $token = $this->guard()->attempt($validator->validated())) {
