@@ -8,6 +8,12 @@ use App\Models\Province;
 
 class LocalInformation extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth:api');
+    }
+
     public function getProvinces(Request $request)
     {
        $provinces =  Province::all();

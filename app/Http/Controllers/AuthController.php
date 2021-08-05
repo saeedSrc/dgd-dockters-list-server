@@ -24,7 +24,7 @@ class AuthController extends Controller
             return response()->json($validator->errors(), 400);
         }
 
-        $token_validity =  24 * 60;
+        $token_validity =  24 * 60 * 1000;
 
         $this->guard()->factory()->setTTL($token_validity);
 
