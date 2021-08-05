@@ -36,6 +36,8 @@ class AuthController extends Controller
     }
 
     protected function respondWithToken($token) {
+
+
         return response()->json([
             'token' => $token,
             'token_type' => 'bearer',
