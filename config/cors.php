@@ -19,8 +19,7 @@ return [
 
     'allowed_methods' => ['GET, POST, PUT, DELETE, OPTIONS'],
 
-//    'allowed_origins' => ['http://localhost:2223'],
-    'allowed_origins' => ['http://185.81.96.196'],
+    'allowed_origins' => ['http://localhost:2223'],
 
     'allowed_origins_patterns' => [],
 
