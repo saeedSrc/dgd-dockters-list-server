@@ -11,6 +11,7 @@ use App\Http\Controllers\InsuranceCompanyController;
 use App\Http\Controllers\CollegeController;
 use App\Http\Controllers\SpecialtyController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -281,3 +282,10 @@ Route::delete('/doctor_center/{id}', [CenterController::class, 'deleteDoctorCent
 
 ///////////////////// center_doctor /////////////////////////////////////////////
 // request: insurance_company_id
+Route::post('/search', [SearchController::class, 'search']);
+
+////////////////////////search ///////////////////////////////////////////
+
+
+
+////////////////////////search ///////////////////////////////////////////
