@@ -24,7 +24,8 @@ class CreateCentersTable extends Migration
             $table->integer('area');
             $table->string('area_name');
             $table->integer('discount');
-            $table->integer('satisfaction');
+            $table->float('satisfaction');
+            $table->integer('satisfaction_num')->default(0);
             $table->unsignedBigInteger('hours_of_work_id');
             $table->enum('governmental_type', ['governmental', 'private']);
             $table->unsignedBigInteger('type_id');

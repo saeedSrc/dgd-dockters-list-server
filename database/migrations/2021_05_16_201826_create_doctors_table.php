@@ -26,7 +26,8 @@ class CreateDoctorsTable extends Migration
             $table->unsignedBigInteger('college_id');
             $table->integer('area');
             $table->string('area_name');
-            $table->integer('satisfaction');
+            $table->float('satisfaction');
+            $table->integer('satisfaction_numb')->default(0);
             $table->decimal('latitude');
             $table->decimal('longitude');
             $table->timestamps();
