@@ -32,7 +32,7 @@ class CenterController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['DownloadCenterImage', 'DownloadCenterImage', 'DownloadDoctorImage']]);
+        $this->middleware('auth:api', ['except' => ['DownloadCenterImage', 'DownloadLogo', 'DownloadCenterImage', 'DownloadDoctorImage']]);
     }
 
     /**
